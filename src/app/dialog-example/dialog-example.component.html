@@ -1,0 +1,27 @@
+<!-- <p>dialog-example works!</p>
+<ng-otp-input
+  (onInputChange)="onOtpChange($event)"
+  [config]="{ length: 5 }"
+></ng-otp-input> -->
+
+<h2 mat-dialog-title>OTP Authentication</h2>
+<mat-dialog-content>
+  Please enter OTP sent to your email
+  <br />
+  <ng-otp-input
+    (onInputChange)="onOtpChange($event)"
+    [config]="{ length: 5 }"
+  ></ng-otp-input
+></mat-dialog-content>
+<mat-dialog-actions>
+  <!-- <button mat-button (click)="doAction()">close</button> -->
+  <button
+    type="submit"
+    class="btn btn-primary btn-lg btn-block w-75 mx-auto"
+    id="loginButton"
+    (click)="doAction()"
+  >
+    Submit
+  </button>
+</mat-dialog-actions>
+

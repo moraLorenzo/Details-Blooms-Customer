@@ -1,0 +1,293 @@
+<div class="mx-auto" id="topay-form">
+  <div class="card-body">
+    <div class="card-title text-center header-top">
+      <div class="showcase">
+        <h3 class="mt-1" id="line-style" style="text-align: center">
+          <span class="explorer">TO PAY</span>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="card mx-auto" id="card_info">
+    <div class="card-body content" style="display: block">
+      <h2 style="font-family: 'bebas'">Details & Blooms Payment Details</h2>
+      <div id="payment_dits">
+        <h4 style="font-weight: 500; font-family: 'bebas'">
+          GCash: BloomPod (0912 123 xxxx)
+        </h4>
+        <h4 style="font-weight: 500; font-family: 'bebas'">
+          BDO: BloomPod xxxx xxxxx xxxxxxx
+        </h4>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row w-75 mx-auto">
+    <div class="col-12 mt-3 mb-1">
+      <h4 class="text-uppercase">Details & Blooms Payment Details</h4>
+    </div>
+  </div>
+
+  <div class="row w-75 mx-auto">
+    <div class="col-xl-6 col-md-12 mt-2">
+      <div class="card overflow-hidden">
+        <div class="card-content">
+          <div class="card-body cleartfix">
+            <div class="media align-items-stretch">
+              <div class="align-self-center">
+                <i class="icon-pencil primary font-large-2 mr-2"></i>
+              </div>
+              <div class="media-body">
+                <img
+                  src="assets/icon/GCash-Logo.png"
+                  alt="gcash"
+                  width="100rem"
+                />
+                <br />
+                <span> BloomPod (0912 123 xxxx)</span>
+              </div>
+              <!-- <div class="align-self-center">
+                <h1>18,000</h1>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 col-md-12 mt-2">
+      <div class="card overflow-hidden">
+        <div class="card-content">
+          <div class="card-body cleartfix">
+            <div class="media align-items-stretch">
+              <div class="align-self-center">
+                <i class="icon-pencil primary font-large-2 mr-2"></i>
+              </div>
+              <div class="media-body">
+                <img src="assets/icon/BDO.png" alt="gcash" width="110rem" />
+                <br />
+                <span> BloomPod xxxx xxxxx xxxxxxx</span>
+              </div>
+
+              <!-- <div class="align-self-center">
+                <h1>18,000</h1>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row w-75 mx-auto">
+    <div class="col" style="margin-top: 0.5rem !important">
+      <div class="card overflow-hidden">
+        <div class="card-content">
+          <div class="card-body cleartfix">
+            <div class="media align-items-stretch">
+              <div class="align-self-center">
+                <i class="icon-pencil primary font-large-2 mr-2"></i>
+              </div>
+              <div class="media-body">
+                <img src="assets/icon/bpi.png" alt="gcash" width="70rem" />
+                <br />
+                <span>BloomPod xxxx xxxxx xxxxxxx</span>
+              </div>
+              <!-- <div class="align-self-center">
+                <h1>18,000</h1>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-3">
+    <div class="alert alert-dark w-75 mx-auto mt-2" role="alert">
+      <h2>Payment Instructions</h2>
+      Pay for the bouquet price via GCASH or BDO to the store accounts. Then
+      screenshot or take the image of the payment receipt and attach it with the
+      bouquet to submit to the florists.
+    </div>
+  </div>
+
+  <div class="mx-auto" id="main_card">
+    <div class="card-body">
+      <div *ngIf="!orders" style="text-align: center">
+        <img src="assets/empty.svg" alt="emp" />
+        <h3><strong>No Order that needs to be paid yet. Order Now!</strong></h3>
+        <br />
+      </div>
+
+      <ul class="list-group">
+        <div class="row">
+          <div
+            class="col-sm"
+            style="display: block"
+            *ngFor="let order of orders; let i = index"
+          >
+            <div class="card" style="margin: auto">
+              <img
+                *ngIf="order.order_flower == 'Generated Flower Bouquet'"
+                class="card-img-top p-1 mb-0"
+                src="assets/icon/benef_log.jpg"
+                alt="Card image cap"
+              />
+              <img
+                style="width: 13.8vw"
+                *ngIf="order.order_flower != 'Generated Flower Bouquet'"
+                class="card-img-top p-1 mb-0"
+                src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+                  order.order_flower
+                }}.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body mt-0">
+                <p class="card-text mt-0">
+                  <!-- <span id="detail"> {{ order.order_payment }}</span
+                  ><br />
+                  <span id="detail"
+                    >{{ order.order_time }} {{ order.order_date | date }}</span
+                  ><br />
+                  <span
+                    id="detail"
+                    *ngIf="
+                      order.order_recipient != '' &&
+                      order.order_recipient != null
+                    "
+                    >Recipients: {{ order.order_recipient }}</span
+                  ><br />
+                  <span style="font-size: 160%"
+                    >₱{{ order.order_totalprice | number: "1.2-2" }}</span
+                  > -->
+
+                  <button
+                    matTooltip="Cancel the product"
+                    matTooltipPosition="above"
+                    (click)="remove(order.order_id, i)"
+                    id="quick_btn1"
+                  >
+                    <mat-icon style="font-size: 150%"
+                      >remove_shopping_cart</mat-icon
+                    >
+                  </button>
+                </p>
+                <div class="row p-3">
+                  <div class="col">
+                    <p id="title">Mode:</p>
+                    <p id="Infos">
+                      {{ order.order_payment }}
+                    </p>
+                  </div>
+
+                  <div class="col">
+                    <p id="title">Total Price:</p>
+                    <p id="Infos">
+                      ₱{{ order.order_totalprice | number: "1.2" }}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row mt-3 p-3">
+                  <div class="col">
+                    <p id="title">Date and Time:</p>
+                    <p id="Infos">
+                      {{ order.order_date | date }} at {{ order.order_time }}
+                    </p>
+                  </div>
+
+                  <div class="col">
+                    <p id="title">For:</p>
+                    <p id="Infos" *ngIf="order.order_recipient">
+                      {{ order.order_recipient }}
+                    </p>
+                    <p id="Infos" *ngIf="!order.order_recipient">Myself</p>
+                  </div>
+                </div>
+                <form>
+                  <div class="form-group">
+                    <h4 class="mb-0 mx-auto text-center">
+                      Upload Payment Image
+                    </h4>
+                    <input
+                      #fileUpload
+                      style="display: none"
+                      class="form-control-file"
+                      accept=".png,.jpeg,.jpg"
+                      (change)="onFileChange($event, i)"
+                      name="report"
+                      type="file"
+                    />
+
+                    <div
+                      style="
+                        width: 80%;
+                        height: 100%;
+                        border-radius: 10px;
+                        border: 1px solid rgb(209, 209, 209);
+                      "
+                      class="mx-auto"
+                    >
+                      <div class="file-upload mx-auto text-center mt-1">
+                        <span *ngIf="i == index; else none">
+                          <img
+                            id="output"
+                            [src]="image_src"
+                            width="100"
+                          /><br />
+                          {{ fileName }}
+                        </span>
+                        <ng-template #none> No file chosen yet. </ng-template>
+
+                        <button
+                          mat-button
+                          color="primary"
+                          type="button"
+                          class="upload-btn"
+                          (click)="fileUpload.click()"
+                        >
+                          Browse
+                        </button>
+                      </div>
+                    </div>
+
+                    <div style="text-align: center" class="mt-2">
+                      <button
+                        style="width: 80%"
+                        mat-flat-button
+                        color="accent"
+                        [disabled]="i != index"
+                        type="button"
+                        (click)="upload(order.order_id, i)"
+                      >
+                        Upload Payment
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <div id="page-overlay" *ngIf="showSpinner">
+    <div class="content">
+      <div
+        class="center-image"
+        style="
+          display: flex;
+
+          justify-content: center;
+        "
+      >
+        <img class="rotate" id="spinner" src="assets/icon/benef_logo.png" />
+      </div>
+
+      <b id="wait" style="text-align: center">Please wait...</b>
+    </div>
+  </div>
+</div>

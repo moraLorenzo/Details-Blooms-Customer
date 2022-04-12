@@ -1,0 +1,79 @@
+<div id="center container">
+  <!-- <div class="mx-auto" id="details">
+    <div class="card-body" id="body_details">
+      <h2 class="card-title">
+        Be Artistic Yourself and Create Combinations of Flowers
+      </h2>
+
+    </div>
+  </div> -->
+
+  <div class="container" style="width: 65%; margin-top: 1%">
+    <div class="showcase">
+      <h3 class="mt-5" id="line-style" style="text-align: center">
+        <span class="explorer"
+          >Be Artistic Yourself and Create Combinations</span
+        >
+      </h3>
+      <h3 class="mb-5" id="line-style" style="text-align: center">
+        <span style="font-family: 'bebas'">of Flowers</span>
+      </h3>
+    </div>
+    <div class="form-group mx-auto mt-3 mb-0 text-center" style="width: 100%">
+      <!-- <h1 for="selectInput" class="mt-0 mb-0" style="font-size: 2rem;font-weight: 500;">FLOWERS</h1> -->
+
+      <mat-form-field appearance="fill" class="mt-0 mb-0" id="input-range">
+        <mat-label style="color: rgb(0, 48, 4)">Flower Quantity</mat-label>
+        <mat-select id="selectInput" (selectionChange)="onChange($event.value)">
+          <mat-option value="6">Six (6)</mat-option>
+          <mat-option value="9">Nine (9)</mat-option>
+          <mat-option value="12">Twelve (12)</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="row mb-5">
+      <div
+        class="col-sm mt-2 d-flex justify-content-between"
+        *ngFor="let flower of flowers; let i = index"
+        style="padding: 2rem"
+      >
+        <div style="width: 15rem; margin: auto; cursor: pointer">
+          <div
+            class="card-body"
+            (click)="generate(flower.flower_name, flower.flower_price)"
+          >
+            <div id="main_card">
+              <img
+                id="main_flower"
+                src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/flowers/{{
+                  flower.flower_name
+                }}.png"
+                class="card-img-top p-1"
+                alt="{{ flower.name }}"
+              />
+            </div>
+            <!-- <div class="text-center" id="main_name">
+              <b>{{ flower.flower_name.replace("_", " ") | titlecase }}</b>
+            </div> -->
+
+            <div class="card-content">
+              <h3 class="title">
+                {{ flower.flower_name.replace("_", " ") | titlecase }}
+              </h3>
+              <h2 class="subtitle">
+                <sup>₱</sup>{{ flower.flower_price | number: "1.2" }}
+              </h2>
+              <button
+                (click)="generate(flower.flower_name, flower.flower_price)"
+                id="add_to_cart"
+              >
+                <mat-icon>check</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

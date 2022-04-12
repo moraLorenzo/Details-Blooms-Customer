@@ -1,0 +1,148 @@
+<div id="center container">
+  <!-- <div class="mx-auto" id="details">
+    <div class="card-body" id="body_details">
+      <h2 class="card-title mb-0">
+        Freely Choose Artistic Floral Bouquets Made by our own Talented Florists
+      </h2>
+    </div>
+  </div> -->
+
+  <div class="mx-auto" style="width: 65%; margin-top: 1%">
+    <div class="form-group mx-auto mt-1" id="quickgroup">
+      <div class="showcase">
+        <h3 class="mt-5" id="line-style" style="text-align: center">
+          <span class="explorer">Choose Artistic Floral Bouquets</span>
+        </h3>
+        <h3 class="mb-5" id="line-style" style="text-align: center">
+          <span style="font-family: 'bebas'"
+            >designed by our own Talented Florists</span
+          >
+        </h3>
+      </div>
+      <!-- <div class="form-group mx-auto mt-3 mb-0 text-center" style="width: 100%">
+        <mat-form-field appearance="fill" class="mt-0 mb-0" id="input-range">
+          <mat-label>Price Range</mat-label>
+          <mat-select
+            id="selectInput"
+            [(value)]="selected"
+            panelClass="dropDown-seasons-panel"
+            (selectionChange)="priceChange($event.value)"
+          >
+            <mat-option value="0">None</mat-option>
+            <mat-option value="1">70-299</mat-option>
+            <mat-option value="2">300-599</mat-option>
+            <mat-option value="3">600-799</mat-option>
+            <mat-option value="4">800-Above</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div> -->
+
+      <div id="radiobtn">
+        <mat-radio-group
+          aria-labelledby="example-radio-group-label"
+          id="selectInput"
+          [(ngModel)]="selected"
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group"
+          (change)="priceChange($event.value)"
+        >
+          <label id="example-radio-group-label"><b>Price Range</b></label>
+
+          <mat-radio-button class="example-radio-button" value="0"
+            >None</mat-radio-button
+          >
+          <mat-radio-button class="example-radio-button" value="1"
+            >₱ 70-299</mat-radio-button
+          >
+          <mat-radio-button class="example-radio-button" value="2"
+            >₱ 300-599</mat-radio-button
+          >
+          <mat-radio-button class="example-radio-button" value="3"
+            >₱ 600-799</mat-radio-button
+          >
+          <mat-radio-button class="example-radio-button" value="4"
+            >₱ 800-Above</mat-radio-button
+          >
+        </mat-radio-group>
+      </div>
+
+      <div class="row mb-5" id="gridInput">
+        <div
+          class="col-sm mt-2 d-flex justify-content-between"
+          *ngFor="let flower of flowers; let i = index"
+          style="padding: 2rem"
+        >
+          <div class="card-body">
+            <div
+              id="preview"
+              (click)="confirm(i, flower)"
+              style="
+                cursor: pointer;
+                border: 1px solid rgb(197, 162, 110);
+                width: 12rem;
+                margin: auto;
+                border-radius: 50%;
+              "
+            >
+              <div class="middle">
+                <div class="text123">Click to Preview</div>
+              </div>
+              <div>
+                <img
+                  id="quick_img"
+                  src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+                    flower.quick_name
+                  }}.jpg"
+                  class="card-img-top p-1"
+                  alt="{{ flower.name }}"
+                />
+              </div>
+            </div>
+
+            <div class="card-title text-center mt-1 mb-0" id="quick_info">
+              <h4 class="mb-0">{{ flower.quick_name | titlecase }}</h4>
+              <h1 class="mt-0 mb-0" style="color: rgb(0, 70, 29)">
+                {{ flower.quick_price | currency: selectedCurrency }}
+              </h1>
+              <button
+                [disabled]="!show_cart"
+                (click)="add_to_cart(flower)"
+                id="add_to_cart"
+              >
+                <mat-icon>shopping_cart</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="content">
+  <div class="header">
+    <h1>Bouquets</h1>
+  </div>
+
+
+
+  <h1 class="list-header"></h1>
+
+  <div class="food-list">
+    <div class="card-noline" *ngFor="let flower of flowers; let i = index">
+      <img
+        style="border-radius: 50%"
+        src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+          flower.quick_name
+        }}.jpg"
+      />
+      <div class="card-content">
+        <h3 class="title">{{ flower.quick_name | titlecase }}</h3>
+        <h2 class="subtitle">
+          <sup>₱</sup>{{ flower.quick_price | number: "1.2" }}
+        </h2>
+
+      </div>
+    </div>
+  </div>
+</div> -->

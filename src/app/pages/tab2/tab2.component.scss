@@ -1,0 +1,31 @@
+#card {
+    cursor: pointer;
+    width: 100%;
+    height: 180%; 
+    text-align: center; 
+    color: white;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right,#65d863,#248661,#4bece4);
+}
+
+#card_body1 {
+    background-image: url('../../../assets/flowers/orchid.png');
+    background-repeat: no-repeat;
+    background-size: 80% 120%;
+    background-position: 250% -100%;
+}
+#card_body2 {
+    background-image: url('../../../assets/flowers/pink_orchid.png');
+    background-repeat: no-repeat;
+    background-size: 80% 120%;
+    background-position: 250% -100%;
+}
+
+#card:hover {
+    font-weight: 500;
+    background: linear-gradient(to bottom right,#4bece4,#248661,#65d863);
+}
+
+.card-text {
+    font-size: 15px;
+}

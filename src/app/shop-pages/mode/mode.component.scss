@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.form-group.required .control-label:after {
+  content: " *";
+  color: red;
+}
+
+#page-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1009;
+  background: rgba(255, 255, 255, 0.8);
+
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    .center-image {
+      #spinner {
+        height: 10rem;
+        top: 35%;
+        left: calc(55% - 10%);
+        z-index: 100;
+      }
+      .rotate {
+        animation: rotation 4s infinite linear;
+      }
+    }
+
+    #wait {
+      // position: fixed;
+      top: 56%;
+      // left: calc(57% - 10%);
+      text-align: center;
+      z-index: 100;
+      color: #08595e;
+      font-size: 3vw;
+    }
+  }
+}
+
+#details {
+  width: 65%;
+  margin-top: 1%;
+  color: white;
+  font-weight: 300;
+  background: url("../../../assets/icon/header1.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  border-radius: 2.5rem;
+  padding: 1rem 1rem;
+}
+
+#body_details {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.288);
+  border-radius: 2.5rem;
+  padding: 1rem 1rem;
+}
+
+:root {
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+
+select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // background-color: transparent;
+  border: 1px solid rgb(206, 205, 205);
+  // padding: 0 1em 0 0;
+  margin: 0;
+  // width: 100%;
+  // font-family: inherit;
+  // font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+
+  // Stack above custom arrow
+  z-index: 1;
+
+  // Remove dropdown arrow in IE10 & IE11
+  // @link https://www.filamentgroup.com/lab/select-css.html
+  &::-ms-expand {
+    display: none;
+  }
+
+  // Remove focus outline, will add on alternate element
+  outline: none;
+}
+
+.select {
+  // display: grid;
+  grid-template-areas: "select";
+  // align-items: center;
+  // position: relative;
+
+  select,
+  &::after {
+    grid-area: select;
+  }
+
+  // min-width: 50%;
+  // max-width: 50%;
+
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  // padding: 0.25em 0.5em;
+
+  // font-size: 1rem;
+  cursor: pointer;
+  // line-height: 1.1;
+
+  // Optional styles
+  // remove for transparency
+  // background: #fff;
+  // background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+#mode_form {
+  background: none;
+  color: rgb(2, 34, 12);
+  width: 65%;
+  margin-top: 1%;
+}
+
+label {
+  font-size: 1rem;
+}
+
+.form-control {
+  height: calc(1.5em + 1.5rem + 2px);
+  background-color: none;
+}
+
+.custom-select {
+  height: calc(1.5em + 1.5rem + 2px);
+  background-color: none;
+}
+
+#spinner {
+  width: 10%;
+  height: 21%;
+  position: fixed;
+  top: 35%;
+  left: calc(55% - 10%);
+  z-index: 100;
+}
+
+#wait {
+  position: fixed;
+  top: 56%;
+  left: calc(57% - 10%);
+  z-index: 100;
+}
+
+// #page-overlay {
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   z-index: 1009;
+//   background: none;
+// }
+
+.rotate {
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#submit_btn {
+  background: #3caa4a;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.showcase {
+  color: rgb(2, 34, 12);
+  background-color: none;
+  text-align: center;
+  padding: 20px 30px;
+  text-align: justify;
+}
+.explorer {
+  font-size: 5vw;
+  background-color: none;
+
+  text-transform: uppercase;
+  font-family: "bebas";
+}
+
+@media screen and (max-width: 850px) {
+  #mode_form {
+    width: 100%;
+  }
+  .explorer {
+    font-size: 10vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  #page-overlay {
+    .content {
+      .center-image {
+        #spinner {
+          height: 10rem;
+        }
+      }
+
+      #wait {
+        top: 56%;
+        text-align: center;
+        z-index: 100;
+        color: #08595e;
+        font-size: 2rem;
+      }
+    }
+  }
+}

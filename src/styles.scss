@@ -1,0 +1,249 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$bloom-pod-web-primary: mat-palette($mat-indigo);
+$bloom-pod-web-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$bloom-pod-web-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$bloom-pod-web-theme: mat-light-theme(
+  (
+    color: (
+      primary: $bloom-pod-web-primary,
+      accent: $bloom-pod-web-accent,
+      warn: $bloom-pod-web-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($bloom-pod-web-theme);
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$bloom-pod-web-primary: mat-palette($mat-indigo);
+$bloom-pod-web-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$bloom-pod-web-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$bloom-pod-web-theme: mat-light-theme(
+  (
+    color: (
+      primary: $bloom-pod-web-primary,
+      accent: $bloom-pod-web-accent,
+      warn: $bloom-pod-web-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($bloom-pod-web-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  src: local("Liberal"),
+    url(./assets/fonts/Liberal-Regular.ttf) format("truetype");
+  font-family: "Liberal";
+}
+
+@font-face {
+  src: local("bebas"), url(./assets/fonts/bebas.ttf) format("truetype");
+  font-family: "bebas";
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  src: local("Liberal"),
+    url(./assets/fonts/Liberal-Regular.ttf) format("truetype");
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif, "Liberal";
+  background-color: #ffffff;
+}
+.mat-dialog-container {
+  color: rgb(2, 34, 12);
+  font-weight: 500;
+}
+
+.mat-button.mat-success,
+.mat-flat-button.mat-success {
+  color: rgb(2, 34, 12);
+  background: #44dcb6;
+}
+
+.mat-button.mat-accent,
+.mat-flat-button.mat-accent {
+  color: rgb(2, 34, 12);
+  background: #48d444;
+}
+
+.mat-stroked-button.mat-primary,
+.mat-flat-button.mat-primary {
+  color: rgb(2, 34, 12);
+}
+
+// .mat-dialog-content {
+//     background: rgb(247, 247, 247);
+// }
+// .mat-dialog-actions {
+//     background: rgb(247, 247, 247);
+// }
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Liberal", sans-serif;
+}
+// sidenav
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-sidenav-container {
+  height: 100vh;
+}
+
+b {
+  font-family: "Liberal";
+}
+
+.mat-sidenav-container .mat-sidenav {
+  background-color: #e3f0ff;
+  padding: 10px;
+  min-width: 150px;
+}
+
+.mat-sidenav-container .mat-sidenav label {
+  color: black;
+  font: 500 20px/32px "Liberal";
+}
+
+.mat-sidenav-container .mat-sidenav nav {
+  margin-top: 15px;
+}
+
+.mat-sidenav-container .mat-sidenav nav a {
+  display: block;
+  outline: 0px;
+  margin: 5px 0px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.mat-sidenav-container .mat-sidenav nav a:hover {
+  color: #4caf50;
+}
+.mat-sidenav-container .mat-sidenav nav a.active {
+  color: #4caf50;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar {
+  height: 40px;
+  padding: 0px;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header .mat-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a {
+  color: black;
+  padding: 5px 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a:hover {
+  color: #4caf50;
+}
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a.active {
+  color: #4caf50;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1023px) {
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar {
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar header .mat-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav {
+    display: none;
+  }
+  // .mat-sidenav-container .mat-sidenav-content section {
+  //   margin: 0 10px;
+  // }
+}
+
+@media screen and (min-width: 1024px) {
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar header {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  // .mat-sidenav-container .mat-sidenav-content section {
+  //   max-width: 1024px;
+  //   margin: 0 auto;
+  // }
+}
+
+.dropDown-seasons-panel {
+  border-radius: 10px !important;
+  border: 1px solid gray !important;
+  position: absolute !important;
+  top: 50px !important;
+}

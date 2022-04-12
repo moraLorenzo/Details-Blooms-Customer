@@ -1,0 +1,135 @@
+.close-button{
+    float: right;
+    top:-24px;
+    right:-24px;
+    display: inline; 
+    margin: 1%;
+  }
+  
+  .close-icon {
+    transition: 1s ease-in-out;
+  }
+  
+  .close-icon:hover {
+    transform: rotate(180deg);
+  }
+  
+  // button {
+  //   display: inline; 
+  //   margin: 1%;
+  //   text-align: center;
+  // }
+
+  h5{
+    // padding-left: 1%;
+    font-size: 100%;
+    color: rgb(155, 153, 153);
+    line-height: 1.1428571435;
+    display: inline;
+  }
+
+  h5{
+    // padding-left: 1%;
+    font-size: 100%;
+    color: rgb(2, 34, 12);
+    line-height: .1428571435;
+    display: inline;
+  }
+
+  
+  #quick_btn1 {
+    border-radius: 5px;
+    background: none;
+    // vertical-align: bottom;
+    border: none;
+    position: absolute;
+    // top: 0;
+    // right: 0;
+    z-index: 10;
+  }
+  #quick_buy {
+    border-radius: 20px;
+    background: #00c4cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 150%;
+  }
+  // #quick_btn1:hover {
+  //   background-color: grey;
+  //   border-radius: 100%;
+  // }
+  #quick_btn2 {
+    // display: flex;
+    float: left;
+    width: 82%;
+    // margin: 1%;
+  }
+  
+  #separator {
+    min-height: 85%;
+    max-height: 85%;
+    max-width: 100%;
+    border-bottom: 1px solid white;
+    color: black;
+  }
+  
+  #detail {
+    max-height: 250px;
+    overflow-x:hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .about {
+    // margin-top: 0.5rem;
+    // margin-bottom: 2.5rem;
+
+    .side-by-side {
+      display: flex;
+      justify-content: space-between;
+
+      sup {
+        font-size: 0.6rem;
+        margin-right: 2px;
+      }
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 0.5;
+      color: #6e6e6e;
+    }
+  }
+
+@media screen and (max-width: 450px) {
+  .card-body{
+    // background-color: aqua;
+    margin-left: -70px;
+  }
+}

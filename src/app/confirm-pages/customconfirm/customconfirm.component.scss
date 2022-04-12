@@ -1,0 +1,81 @@
+
+.close-button{
+    float: right;
+    top:-24px;
+    right:-24px;
+    margin: 1%;
+    display: inline;
+  }
+  
+  .close-icon {
+    transition: 1s ease-in-out;
+  }
+  
+  .close-icon:hover {
+    transform: rotate(180deg);
+  }
+
+  #quick_btn {
+    display: block;
+    width: 35%;
+    // margin-top: 1%;
+    float: left;
+  }
+  
+  #quick_buy {
+    display: block;
+    width: 100%;
+    // margin-top: 5%;
+    // float: right;
+  }
+  
+  #separator {
+    min-height: 70%;
+    max-height: 70%;
+    max-width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: black;
+  }
+  
+  #detail {
+    max-height: 200px;
+    overflow-x:hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  h6{
+    // padding-left: 1%;
+    font-size: 100%;
+    color: rgb(155, 153, 153);
+    line-height: 1.1428571435;
+    display: flex;
+  }
+
+  h4{
+    // padding-left: 1%;
+    font-size: 100%;
+    color: rgb(2, 34, 12);
+    line-height: .1428571435;
+    display: block;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  

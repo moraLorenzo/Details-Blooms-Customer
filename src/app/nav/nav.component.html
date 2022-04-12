@@ -1,0 +1,546 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over">
+    <label>
+      <mat-icon (click)="m_cart()" style="font-weight: 500; font-size: 2rem"
+        >menu</mat-icon
+      >
+      <b class="ml-3" style="vertical-align: top">DETAILS & BLOOMS</b>
+    </label>
+
+    <nav>
+      <a routerLink="home" (click)="clickHandler()" routerLinkActive="active"
+        >Home</a
+      >
+      <a routerLink="quick" (click)="clickHandler()" routerLinkActive="active"
+        >Florists Choice</a
+      >
+      <a routerLink="custom" (click)="clickHandler()" routerLinkActive="active"
+        >Customers Choice</a
+      >
+      <a routerLink="toPay" (click)="clickHandler()" routerLinkActive="active"
+        >To Pay</a
+      >
+      <a routerLink="service" (click)="clickHandler()" routerLinkActive="active"
+        >Service</a
+      >
+      <!-- <a routerLink="contact" (click)="clickHandler()" routerLinkActive="active"
+        >About</a
+      > -->
+
+      <a
+        class="nav-link"
+        title="Profile"
+        *ngIf="show_cart == true"
+        (click)="sidenav.close()"
+        href="#/nav/profile"
+        >Profile</a
+      >
+
+      <!-- <a
+        class="nav-link"
+        title="Cart"
+        (click)="Cart()"
+        *ngIf="show_cart == true"
+      >
+        Cart</a
+      > -->
+
+      <a
+        class="nav-link"
+        title="Login"
+        href="#/nav/account"
+        (click)="sidenav.close()"
+        *ngIf="show_cart != true"
+        >Login</a
+      >
+    </nav>
+
+    <div id="myCart1" class="Cartoverlay1" *ngIf="show_cart">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeCart()"
+        >&times;</a
+      >
+      <h1 class="mt-2 ml-3 justify-content-start">CART</h1>
+      <div class="Cartoverlay-content">
+        <div *ngIf="!cart_obj" style="text-align: center; font-size: medium">
+          <p>Add bouquets to Cart NOW! There's nothing here.</p>
+          <br />
+          <div class="card" style="background: none">
+            <div class="card-body" style="cursor: pointer; font-size: small">
+              <p>
+                “Flowers dont worry about how theyre going to bloom.
+                <br />They just open up and turn toward the light and that makes
+                them beautiful.” <br />Jim Carrey
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="list-group">
+          <div class="col" *ngFor="let order of orders; index as i">
+            <li
+              class="list-group-item"
+              style="display: flex"
+              id="preview"
+              (click)="view(i, order)"
+            >
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <ng-container
+                        class="mb-0"
+                        *ngIf="
+                          order.order_flower == 'Generated Flower Bouquet';
+                          else quick_img
+                        "
+                      >
+                        <div style="display: flex">
+                          <div style="flex-basis: 22%">
+                            <div class="middle">
+                              <div class="text123">Click to Preview</div>
+                            </div>
+                            <img
+                              style="max-width: 100%; transition: 0.5s ease"
+                              class="rounded float-left"
+                              id="img-view"
+                              src="assets/icon/benef_log.jpg"
+                            />
+                          </div>
+                          <div class="text d-block">
+                            <p class="mb-0">{{ order.order_flower }}</p>
+                            <p class="mb-0" class="text-details">
+                              {{ order.main_flower }}
+                            </p>
+                            <p class="mb-0" class="text-details">
+                              {{ order.secondary_flower }}
+                            </p>
+                            <p
+                              class="mb-0"
+                              class="text-details"
+                              *ngIf="order.tertiary_flower"
+                            >
+                              {{ order.tertiary_flower }}
+                            </p>
+                          </div>
+                        </div>
+                      </ng-container>
+                      <ng-template class="mb-0" #quick_img>
+                        <div style="display: flex">
+                          <div
+                            style="flex-basis: 22%"
+                            id="preview"
+                            (click)="view(i, order)"
+                          >
+                            <div class="middle">
+                              <div class="text123">Click to Preview</div>
+                            </div>
+                            <img
+                              style="max-width: 100%; transition: 0.5s ease"
+                              class="rounded float-left"
+                              id="img-view"
+                              src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+                                order.order_flower
+                              }}.jpg"
+                            />
+                          </div>
+                          <div class="text d-block">
+                            <p class="mb-0">{{ order.order_flower }}</p>
+                            <p class="mb-0" class="text-details">
+                              Soon to have details
+                            </p>
+                          </div>
+                        </div>
+                      </ng-template>
+                    </td>
+                    <td>
+                      <div class="d-block">
+                        <h1 id="details" class="justify-content-end mb-0 mt-0">
+                          ₱{{ order.order_totalprice | number: "1.2-2" }}
+                        </h1>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="background: white">
+    <mat-toolbar
+      color="primary"
+      style="height: 4rem; background: #e3f0ff; color: black"
+    >
+      <header>
+        <mat-icon (click)="m_cart()">menu</mat-icon>
+        <label>
+          <b>DETAILS & BLOOMS</b>
+        </label>
+        <nav>
+          <ul class="nav justify-content-center">
+            <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="Home Page" href="#/nav/home">Home</a>
+            </li>
+            <li class="dropdown" id="nav-items">
+              <a class="nav-link" title="Shop Pages"
+                >Bouquets<mat-icon style="font-size: 90%"
+                  >keyboard_arrow_down</mat-icon
+                ></a
+              >
+            </li>
+            <div id="myNav" class="overlay">
+              <div
+                class="container"
+                style="
+                  margin: 0;
+                  position: absolute;
+                  top: 40%;
+                  left: 50%;
+                  -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+                "
+              >
+                <div class="row">
+                  <div class="col-sm" onclick="window.location='#/nav/quick'">
+                    <div class="flex-row">
+                      <div
+                        class="card col bg-transparent"
+                        style="height: 270px; text-align: center"
+                      >
+                        <div class="pic mx-auto">
+                          <img
+                            class="irc_mut img-fluid"
+                            src="https://i.imgur.com/6r0XCez.png"
+                            width="100"
+                            height="100"
+                          />
+                        </div>
+                        <p>Florists Choice</p>
+                        <p>
+                          Beautiful flower bouquets designed by <br />Details &
+                          Blooms skilled florists<br />that will astound and
+                          delight you.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm" onclick="window.location='#/nav/custom'">
+                    <div class="flex-row">
+                      <div
+                        class="card col bg-transparent"
+                        style="height: 270px; text-align: center"
+                      >
+                        <div class="pic mx-auto">
+                          <img
+                            class="irc_mut img-fluid"
+                            src="https://i.imgur.com/6r0XCez.png"
+                            width="100"
+                            height="100"
+                          />
+                        </div>
+                        <h1>Customers Choice</h1>
+                        <p>
+                          (Customized)<br />Make your flower bouquet unique.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="overlay-content mt-3">
+                <div
+                  id="floristChoice"
+                  class="col option-bouquets"
+                  onclick="window.location='#/nav/quick'"
+                >
+                  <h1>Florists Choice</h1>
+                  <p>
+                    Beautiful flower bouquets designed by <br />Details & Blooms
+                    skilled florists<br />that will astound and delight you.
+                  </p>
+                </div>
+
+                <div
+                  id="customerChoice"
+                  class="col option-bouquets"
+                  onclick="window.location='#/nav/custom'"
+                >
+                  <h1>Customers Choice</h1>
+                  <p>(Customized)<br />Make your flower bouquet unique.</p>
+                </div>
+              </div> -->
+            </div>
+            <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="To Pay Page" href="#/nav/toPay"
+                >To Pay</a
+              >
+            </li>
+            <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="Service Page" href="#/nav/service"
+                >Service</a
+              >
+            </li>
+            <!-- <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="About Us" (click)="AboutUs()">About</a>
+            </li> -->
+
+            <li class="nav-item" id="nav-items" *ngIf="show_cart == true">
+              <a class="nav-link" title="Profile" href="#/nav/profile"
+                ><mat-icon style="display: flex; font-size: 1.5rem"
+                  >person</mat-icon
+                ></a
+              >
+            </li>
+
+            <li class="nav-item" id="nav-items" *ngIf="show_cart == true">
+              <a class="nav-link" title="Cart" (click)="Cart()"
+                ><mat-icon style="display: flex; font-size: 1.5rem"
+                  >add_shopping_cart</mat-icon
+                ></a
+              >
+            </li>
+
+            <li class="nav-item" id="nav-items" *ngIf="show_cart != true">
+              <a class="nav-link" title="Login" href="#/nav/account">Login</a>
+            </li>
+          </ul>
+
+          <!-- <li class="nav-item" *ngIf="show_cart == true; else login_btn">
+            <a class="nav-link" title="Account" href="#/nav/profile"
+              ><mat-icon>person</mat-icon></a
+            >
+          </li>
+          <li class="nav-item" *ngIf="show_cart == true; else login_btn">
+            <button
+              class="nav-link"
+              id="cart_btn"
+              title="Cart"
+              (click)="Cart()"
+            >
+              <mat-icon>add_shopping_cart</mat-icon>
+            </button>
+          </li> -->
+          <!-- 
+          <ng-template #login_btn>
+            <li class="nav-item" id="nav-items">
+              <a class="nav-link" title="Login" href="#/nav/account"
+                ><span>Login</span></a
+              >
+            </li>
+          </ng-template> -->
+          <div id="myCart" class="Cartoverlay">
+            <a href="javascript:void(0)" class="closebtn" (click)="closeCart()"
+              >&times;</a
+            >
+            <!-- <h1 class="mt-2 ml-3 justify-content-start">CART</h1>-->
+            <div class="showcase">
+              <h3 class="mt-5" id="line-style" style="text-align: center">
+                <span class="explorer">CART</span>
+              </h3>
+            </div>
+
+            <div class="Cartoverlay-content">
+              <div
+                *ngIf="!cart_obj"
+                style="text-align: center; font-size: medium"
+              >
+                <p>Add bouquets to Cart NOW! There's nothing here.</p>
+                <br />
+                <div class="card" style="background: none">
+                  <div
+                    class="card-body"
+                    style="cursor: pointer; font-size: small"
+                  >
+                    <p>
+                      “Flowers dont worry about how theyre going to bloom.
+                      <br />They just open up and turn toward the light and that
+                      makes them beautiful.” <br />Jim Carrey
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="list-group">
+                <div class="col" *ngFor="let order of orders; index as i">
+                  <li
+                    class="list-group-item"
+                    style="display: flex"
+                    id="preview"
+                    (click)="view(i, order)"
+                  >
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <ng-container
+                              class="mb-0"
+                              *ngIf="
+                                order.order_flower ==
+                                  'Generated Flower Bouquet';
+                                else quick_img
+                              "
+                            >
+                              <div style="display: flex">
+                                <div style="flex-basis: 22%">
+                                  <div class="middle">
+                                    <div class="text123">Click to Preview</div>
+                                  </div>
+                                  <img
+                                    style="
+                                      max-width: 100%;
+                                      transition: 0.5s ease;
+                                    "
+                                    class="rounded float-left"
+                                    id="img-view"
+                                    src="assets/icon/benef_log.jpg"
+                                  />
+                                </div>
+                                <div class="text d-block">
+                                  <p class="mb-0" style="font-family: 'bebas'">
+                                    {{ order.order_flower }}
+                                  </p>
+                                  <p class="mb-0" class="text-details">
+                                    {{ order.main_flower }}
+                                  </p>
+                                  <p class="mb-0" class="text-details">
+                                    {{ order.secondary_flower }}
+                                  </p>
+                                  <p
+                                    class="mb-0"
+                                    class="text-details"
+                                    *ngIf="order.tertiary_flower"
+                                  >
+                                    {{ order.tertiary_flower }}
+                                  </p>
+                                </div>
+                              </div>
+                            </ng-container>
+                            <ng-template class="mb-0" #quick_img>
+                              <div style="display: flex">
+                                <div
+                                  style="flex-basis: 22%"
+                                  id="preview"
+                                  (click)="view(i, order)"
+                                >
+                                  <div class="middle">
+                                    <div class="text123">Click to Preview</div>
+                                  </div>
+                                  <img
+                                    style="
+                                      max-width: 100%;
+                                      transition: 0.5s ease;
+                                    "
+                                    class="rounded float-left"
+                                    id="img-view"
+                                    src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+                                      order.order_flower
+                                    }}.jpg"
+                                  />
+                                </div>
+                                <div class="text d-block">
+                                  <p class="mb-0" style="font-family: 'bebas'">
+                                    {{ order.order_flower }}
+                                  </p>
+                                  <p class="mb-0" class="text-details">
+                                    Soon to have details
+                                  </p>
+                                </div>
+                              </div>
+                            </ng-template>
+                          </td>
+                          <td>
+                            <div class="d-block">
+                              <h1
+                                id="details"
+                                class="justify-content-end mb-0 mt-0"
+                              >
+                                ₱<b>{{
+                                  order.order_totalprice | number: "1.2-2"
+                                }}</b>
+                              </h1>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </mat-toolbar>
+    <section>
+      <router-outlet></router-outlet>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <mat-list style="text-align: left"
+                ><h4 class="col_title font-weight-bold">Contact Us</h4>
+                <mat-divider></mat-divider>
+                <mat-list-item
+                  ><mat-icon>email</mat-icon
+                  ><a title="Email">
+                    detailsandblooms@yahoo.com</a
+                  ></mat-list-item
+                >
+                <mat-list-item
+                  ><mat-icon>support_agent</mat-icon
+                  ><a title="Contact Number">0915-424-0028</a></mat-list-item
+                >
+
+                <mat-list-item
+                  ><mat-icon>home</mat-icon
+                  ><a title="Address"
+                    >Ground floor, Harbor Point Mall, Subic Bay Freeport Zone</a
+                  ></mat-list-item
+                >
+              </mat-list>
+            </div>
+            <div class="col-sm">
+              <mat-list style="text-align: left"
+                ><h4 class="col_title font-weight-bold">Information</h4>
+                <mat-divider></mat-divider>
+                <mat-list-item
+                  ><mat-icon>help_outline</mat-icon
+                  ><a (click)="AboutUs()" title="About Us"
+                    >About Us</a
+                  ></mat-list-item
+                >
+
+                <!-- <mat-list-item
+                  ><a (click)="ContactUs()" title="Contact Us"
+                    >Contact Us</a
+                  ></mat-list-item
+                > -->
+              </mat-list>
+            </div>
+
+            <div class="col-sm">
+              <mat-list style="text-align: left"
+                ><h4 class="col_title font-weight-bold">Beneficiary</h4>
+                <mat-divider></mat-divider>
+                <!-- <img class="benef_logo" src="../../../assets/icon/benef_logo.png" /> -->
+                <a
+                  style="
+                    color: rgb(2, 34, 12);
+                    font-weight: 500;
+                    text-align: center;
+                  "
+                  >Detials & Blooms Events and Flowers provides assistance to
+                  event needs and cater to flower arrangements and styling
+                  requirements for all occasions.</a
+                >
+              </mat-list>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,453 @@
+.benef_logo {
+  width: 30%;
+  display: block;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 100%;
+}
+.top-header {
+  button {
+    font-family: "bebas";
+  }
+}
+.top-header {
+  position: relative;
+  text-align: center;
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 196, 204, 0.8), #e3f0ff),
+    url(../../../assets/icon/header1.jpg) no-repeat top center;
+  border-top: none;
+
+  .top-image {
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+
+    .large-button {
+      background-color: #4caf50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .large-button:hover {
+      background-color: #169e1b; /* Green */
+      color: white;
+    }
+  }
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background: #e3f0ff;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px Lato, sans-serif;
+  color: rgb(17, 17, 17);
+}
+
+#line-style {
+  width: 100%;
+  text-align: center;
+
+  margin: 3rem 10px 2rem 10px;
+  margin-top: 10rem;
+  color: #08595e;
+}
+
+#line-style span {
+  background: #f3f8fc;
+  text-align: center;
+  padding: 0 10px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  h1 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: "bebas";
+  }
+}
+.box {
+  width: 100%;
+  max-width: 1000px;
+  padding: 15px;
+}
+.box h1 {
+  // font-family: Liberal;
+  font-style: normal;
+  margin: 10px 0;
+  color: inherit;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.cards {
+  // margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.card {
+  width: 32%;
+  padding: 15px 10px;
+  border-radius: 3px;
+  transition: transform 0.3s;
+}
+
+.triple-cards {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 10%;
+  border: none;
+}
+.card a {
+  color: inherit;
+  text-decoration: none;
+}
+.card-thumb {
+  width: 100%;
+
+  img {
+    padding: 10px;
+    color: "white";
+    border-radius: 50px;
+    background-color: #48d444;
+  }
+}
+.card-thumb img {
+  width: 80px;
+}
+.card-title {
+  margin: 5px 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+
+  font-family: "bebas";
+}
+.card-excerpt {
+  font-size: 1rem;
+  padding-top: 10%;
+}
+.card:hover {
+  box-shadow: rgba(8, 89, 94, 0.25) 0px 54px 55px,
+    rgba(8, 89, 94, 0.12) 0px -12px 30px, rgba(8, 89, 94, 0.12) 0px 4px 6px,
+    rgba(8, 89, 94, 0.17) 0px 12px 13px, rgba(8, 89, 94, 0.09) 0px -3px 5px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.product-item:hover {
+  box-shadow: rgb(8, 89, 94, 0.25) 0px 54px 55px,
+    rgba(8, 89, 94, 0.12) 0px -12px 30px, rgba(8, 89, 94, 0.12) 0px 4px 6px,
+    rgba(8, 89, 94, 0.17) 0px 12px 13px, rgba(8, 89, 94, 0.09) 0px -3px 5px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-title {
+  text-transform: uppercase;
+}
+
+#container-banner {
+  display: flex;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  h1 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: "bebas";
+  }
+  .box {
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+
+    @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+    .courses-container {
+    }
+    .course:hover {
+      box-shadow: rgb(8, 89, 94, 0.25) 0px 54px 55px,
+        rgba(8, 89, 94, 0.12) 0px -12px 30px, rgba(8, 89, 94, 0.12) 0px 4px 6px,
+        rgba(8, 89, 94, 0.17) 0px 12px 13px, rgba(8, 89, 94, 0.09) 0px -3px 5px;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .course {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      max-width: 100%;
+
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .course h6 {
+      opacity: 0.6;
+      margin: 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .course h2 {
+      letter-spacing: 1px;
+      margin: 10px 0;
+    }
+
+    .course-preview {
+      background-color: #08595e;
+      color: #fff;
+      padding: 30px;
+      // max-width: 400px;
+    }
+
+    .course-preview a {
+      color: #fff;
+      display: inline-block;
+      font-size: 12px;
+      opacity: 0.6;
+      margin-top: 30px;
+      text-decoration: none;
+    }
+    .course-preview h2 {
+      font-family: "bebas";
+    }
+
+    .course-info {
+      padding: 30px;
+      position: relative;
+      width: 100%;
+      h2 {
+        color: #08595e;
+      }
+    }
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  #services {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .box h1 {
+    font-size: 1.5rem;
+  }
+  .cards {
+    justify-content: center;
+  }
+  .card {
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .product-item {
+    .product-item-content {
+      // border: 1px solid var(--surface-d);
+
+      margin: 0.3rem;
+      text-align: center;
+      padding: 2rem 0;
+
+      h4 {
+        color: #08595e;
+        font-size: 1rem;
+        font-weight: 600;
+
+        position: fixed;
+        bottom: 0;
+      }
+    }
+
+    .product-image {
+      width: 10rem;
+      border-radius: 5px;
+    }
+  }
+
+  .course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .title {
+    color: #08595e;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "bebas";
+  }
+
+  .sub-title {
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    margin: 0;
+    font-family: "bebas";
+  }
+
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 5px 8px;
+    text-align: justify;
+  }
+  #line-style {
+    width: 100%;
+    color: #08595e;
+    text-align: center;
+  }
+
+  #line-style span {
+    background: #f3f8fc;
+    text-align: center;
+  }
+
+  .explorer {
+    font-size: 7vw;
+    font-family: "bebas";
+    white-space: normal;
+    color: #08595e;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #services {
+    text-align: center;
+    margin-top: 10rem;
+  }
+  .column-slider {
+    width: 50%;
+  }
+
+  .product-item {
+    padding: 0rem 1rem;
+    height: 22rem;
+    .product-item-content {
+      // border: 1px solid var(--surface-d);
+      // background: #f3f3f3;
+      // border-radius: 2.5rem;
+      margin: 0.3rem;
+      text-align: center;
+      padding: 0rem 0rem;
+      h3 {
+        font-family: "bebas";
+      }
+
+      h4 {
+        color: #08595e;
+        font-size: 1rem;
+        font-weight: 600;
+
+        position: fixed;
+        bottom: 0;
+      }
+    }
+
+    .product-image {
+      width: 15rem;
+
+      // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      border-radius: 5px;
+      margin-top: 2vh;
+    }
+  }
+
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 20px 30px;
+    text-align: justify;
+  }
+
+  .top-header {
+    img {
+      height: 35rem;
+    }
+    button {
+      font-family: "bebas";
+    }
+  }
+
+  .title {
+    font-size: 4vw;
+    font-family: "bebas";
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    color: #08595e;
+    // text-transform: uppercase;
+
+    // white-space: initial;
+
+    // h1 {
+    //   display: table;
+    //   white-space: nowrap;
+    //   border-spacing: 25px 0;
+    // }
+
+    display: table;
+    white-space: nowrap;
+    border-spacing: 25px 0;
+  }
+
+  .sub-title {
+    font-size: 1.5vw;
+    text-transform: lowercase;
+    font-family: "bebas";
+    padding-top: 1rem;
+  }
+
+  .explorer {
+    font-size: 4vw;
+    font-family: "bebas";
+    white-space: normal;
+    color: #08595e;
+  }
+}

@@ -1,0 +1,415 @@
+<div id="center container" class="wrapper">
+  <!-- <div class="card mx-auto" id="main_card1">
+    <div class="card-body" id="card_info" style="display: flex">
+      <div class="mx-auto">
+        <h1>Account Information</h1>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="card mx-auto" id="main_card">
+      <div class="card-body" id="card_info">
+        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+          <mat-tab label="Login">
+            <form ngNativeValidate (submit)="login($event)">
+                <div class="input-group mb-3 mt-5">
+                  <input
+                    type="email"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Email"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-2">
+                  <input
+                    name=""
+                    [type]="passwordType"
+                    class="form-control input_pass"
+                    value=""
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    (change)="onChange()"
+                    [(ngModel)]="checkBox"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                  <small
+                    ><label class="form-check-label" style="color: rgb(2, 34, 12);">
+                      Show Password
+                    </label></small
+                  >
+                </div>
+
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    mt-3
+                    login_container
+                  "
+                >
+                  <button
+                    type="submit"
+                    name="button"
+                    class="btn login_btn"
+                  >
+                    Login
+                  </button>
+                  
+                </div>
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    mt-3
+                    login_container
+                  "
+                >
+                </div>
+              </form>
+          </mat-tab>
+  
+          <mat-tab label="Register">
+            <form ngNativeValidate (submit)="register($event)">
+                <div class="input-group mb-3 mt-3">
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter First Name"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Last Name"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="email"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Email"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Address"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-2">
+                  <input
+                    name=""
+                    [type]="passwordType"
+                    class="form-control input_pass"
+                    value=""
+                    placeholder="Password"
+                    minlength="8"
+                    required
+                  />
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    (change)="onChange()"
+                    [(ngModel)]="checkBox"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                  <small
+                    ><label class="form-check-label" style="color: rgb(2, 34, 12);">
+                      Show Password
+                    </label></small
+                  >
+                </div>
+
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    mt-3
+                    login_container
+                  "
+                >
+                  <button
+                    type="submit"
+                    name="button"
+                    class="btn login_btn"
+                  >
+                    Register
+                  </button>
+                  
+                </div>
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    mt-3
+                    login_container
+                  "
+                >
+                </div>
+              </form>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div> -->
+  <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <div class="user_card">
+        <div class="d-flex justify-content-center">
+          <div class="brand_logo_container">
+            <img
+              src="assets/icon/benef_logo.png"
+              class="brand_logo"
+              alt="Logo"
+            />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center form_container">
+          <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+            <mat-tab label="Login">
+              <form ngNativeValidate (submit)="login($event)">
+                <div class="input-group mb-3 mt-5">
+                  <div class="input-group-append">
+                    <span class="input-group-text"
+                      ><mat-icon>alternate_email</mat-icon></span
+                    >
+                  </div>
+                  <input
+                    type="email"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Email"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-2">
+                  <div class="input-group-append">
+                    <span class="input-group-text"
+                      ><mat-icon> vpn_key</mat-icon></span
+                    >
+                  </div>
+                  <input
+                    name=""
+                    [type]="passwordType"
+                    class="form-control input_pass"
+                    value=""
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    (change)="onChange()"
+                    [(ngModel)]="checkBox"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                  <small
+                    ><label
+                      class="form-check-label"
+                      style="color: rgb(2, 34, 12)"
+                    >
+                      Show Password
+                    </label></small
+                  >
+                </div>
+                <small
+                  ><label
+                    (click)="forgot_password()"
+                    class="form-check-label"
+                    style="color: rgb(2, 34, 12)"
+                  >
+                    Forgot Password?
+                  </label></small
+                >
+                <div class="d-flex justify-content-center mt-3 login_container">
+                  <button type="submit" name="button" class="btn login_btn">
+                    Login
+                  </button>
+                </div>
+                <div
+                  class="d-flex justify-content-center mt-3 login_container"
+                ></div>
+              </form>
+            </mat-tab>
+
+            <mat-tab label="Register">
+              <form ngNativeValidate (submit)="register($event)">
+                <div class="input-group mb-3 mt-3">
+                  <div class="input-group-append">
+                    <span class="input-group-text"></span>
+                  </div>
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter First Name"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-append">
+                    <span class="input-group-text"></span>
+                  </div>
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Last Name"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-append">
+                    <span class="input-group-text"
+                      ><mat-icon> alternate_email</mat-icon></span
+                    >
+                  </div>
+                  <input
+                    type="email"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Email"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-append">
+                    <span class="input-group-text"
+                      ><mat-icon> home</mat-icon></span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control input_user"
+                    value=""
+                    placeholder="Enter Address"
+                    required
+                  />
+                </div>
+                <div class="input-group mb-2">
+                  <div class="input-group-append">
+                    <span class="input-group-text"
+                      ><mat-icon> vpn_key</mat-icon></span
+                    >
+                  </div>
+                  <input
+                    name=""
+                    [type]="passwordType"
+                    class="form-control input_pass"
+                    value=""
+                    placeholder="Password"
+                    minlength="8"
+                    required
+                  />
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                    (change)="onChange()"
+                    [(ngModel)]="checkBox"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                  <small
+                    ><label
+                      class="form-check-label"
+                      style="color: rgb(2, 34, 12)"
+                    >
+                      Show Password
+                    </label></small
+                  >
+                </div>
+
+                <!-- <div class="form-check mb-2" id="termscheck">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    [(ngModel)]="termschecked"
+                    [ngModelOptions]="{standalone: true}"
+                  />
+                  <small
+                    ><label
+                      class="form-check-label"
+                      style="color: rgb(2, 34, 12)"
+                    >
+                      Terms and Conditions
+                    </label></small
+                  >
+                </div> -->
+
+                <div class="d-flex justify-content-center mt-3 login_container">
+                  <button type="submit" name="button" class="btn login_btn">
+                    Register
+                  </button>
+                </div>
+                <div
+                  class="d-flex justify-content-center mt-3 login_container"
+                ></div>
+              </form>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page-overlay" *ngIf="showSpinner">
+  <div class="content">
+    <div
+      class="center-image"
+      style="
+        display: flex;
+
+        justify-content: center;
+      "
+    >
+      <img class="rotate" id="spinner" src="assets/icon/benef_logo.png" />
+    </div>
+
+    <b id="wait" style="text-align: center">Please wait...</b>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<button
+  matTooltip="Remove the product from Cart"
+  matTooltipPosition="above"
+  (click)="remove()"
+  id="quick_btn1"
+>
+  <mat-icon style="font-size: 200%">remove_shopping_cart</mat-icon>
+</button>
+<div class="mt-0">
+  <div class="col mt-0">
+    <div id="center container">
+      <div class="mx-auto">
+        <div class="card-body" style="text-align: center">
+          <mat-card
+            class="example-card mat-elevation-z0"
+            id="image-card"
+            style="width: 330px"
+          >
+            <mat-card-header>
+              <div style="text-align: center">
+                <mat-card-title>{{ flower_name }}</mat-card-title>
+              </div>
+            </mat-card-header>
+            <mat-card-content>
+              <div
+                *ngIf="flower_name == 'Generated Flower Bouquet'; else quickimg"
+                [innerHtml]="content"
+              ></div>
+
+              <ng-template #quickimg
+                ><img
+                  src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+                    flower_name
+                  }}.jpg"
+                  class="card-img-top p-2"
+                  alt=""
+              /></ng-template>
+            </mat-card-content>
+
+            <mat-card-actions>
+              <h4>Confirm the flower bouquet</h4>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col mt-0">
+    <div
+      class="about"
+      *ngIf="flower_name == 'Generated Flower Bouquet'; else quickcart"
+    >
+      <div class="side-by-side">
+        <p>Primary - {{ primary }}</p>
+      </div>
+      <div class="side-by-side">
+        <p>Secondary - {{ secondary }}</p>
+      </div>
+      <div class="side-by-side" *ngIf="tertiary">
+        <p>Tertiary - {{ tertiary }}</p>
+      </div>
+
+      <div class="side-by-side">
+        <p class="others">Quantity: {{ option }}</p>
+      </div>
+      <hr />
+      <div class="side-by-side">
+        <p><b>Total</b></p>
+        <h1>
+          <b><sup>₱</sup>{{ total | number: "1.2" }}</b>
+        </h1>
+      </div>
+    </div>
+    <ng-template #quickcart>
+      <div class="about">
+        <div class="side-by-side">
+          <p>Name: {{ flower_name }}</p>
+        </div>
+
+        <hr />
+        <div class="side-by-side">
+          <p><b>Total</b></p>
+          <h1>
+            <b><sup>₱</sup>{{ total | number: "1.2" }}</b>
+          </h1>
+        </div>
+      </div>
+    </ng-template>
+
+    <mat-card-actions class="flex">
+      <button
+        class="mt-auto align-self-end"
+        id="quick_buy"
+        (click)="checkout()"
+        color="success"
+        matTooltip="Proceed to buy the product"
+        matTooltipPosition="above"
+      >
+        Checkout
+      </button>
+    </mat-card-actions>
+  </div>
+</div>

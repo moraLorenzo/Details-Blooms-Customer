@@ -1,0 +1,173 @@
+<div class="top-header" id="header-top">
+  <div class="centered" style="text-align: center">
+    <h1 class="title">Cater flower arrangements & styling requirements</h1>
+    <h1 class="title">for all occasions</h1>
+    <!-- <p class="sub-title">
+      Cater flower arrangements & styling requirements for all occasions
+    </p> -->
+    <button type="button" class="large-button" (click)="quick()">
+      Shop Now
+    </button>
+  </div>
+</div>
+
+<div class="showcase bg-white">
+  <h3 class="mb-5" id="line-style" style="text-align: center">
+    <span class="explorer bg-white">Explore Our Products</span>
+  </h3>
+
+  <div class="row">
+    <div class="col-sm column-slider" style="padding-bottom: 5rem">
+      <div style="text-align: center; margin: 0; padding: 0">
+        <p-carousel
+          [value]="obj_flowers"
+          styleClass="custom-carousel"
+          [numVisible]="3"
+          [numScroll]="1"
+          [circular]="true"
+          [autoplayInterval]="2000"
+        >
+          <ng-template let-product pTemplate="item">
+            <div class="product-item" style="overflow: visible">
+              <div class="product-item-content">
+                <div class="p-mb-3"></div>
+                <img
+                  _ngcontent-keu-c52=""
+                  class="product-image"
+                  src="http://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+                    product.quick_name
+                  }}.jpg"
+                  alt="Bamboo Watch"
+                />
+                <div>
+                  <h3 class="p-mb-1 text-left pt-3">
+                    {{ product.quick_name }}
+                  </h3>
+                  <h4 class="p-mt-0 p-mb-3 text-left">
+                    ₱{{ product.quick_price | number: "1.2" }}
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+    <div class="col-sm column-slider">
+      <div style="text-align: center; margin: 0; padding: 0">
+        <p-carousel
+          [value]="flowers"
+          styleClass="custom-carousel"
+          [numVisible]="3"
+          [numScroll]="1"
+          [circular]="true"
+          [autoplayInterval]="2000"
+        >
+          <ng-template let-product pTemplate="item">
+            <div class="product-item">
+              <div class="product-item-content">
+                <div class="p-mb-3"></div>
+                <img
+                  _ngcontent-keu-c52=""
+                  class="product-image"
+                  src="http://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/flowers/{{
+                    product.flower_name
+                  }}.png"
+                  alt="{{ product.flower_name }}"
+                />
+                <div>
+                  <h3 class="p-mb-1 text-left text-left pt-3">
+                    {{ product.flower_name }}
+                  </h3>
+                  <h4 class="p-mt-0 p-mb-3 text-left">
+                    ₱{{ product.flower_price | number: "1.2" }}
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="container">
+  <div class="box">
+    <h3 id="services">Services</h3>
+    <h3 class="explorer" style="text-align: center">
+      Details & Blooms Events and Flowers
+    </h3>
+
+    <div class="cards">
+      <article class="card triple-cards">
+        <a href="#/nav/quick">
+          <figure class="card-thumb">
+            <img src="assets/icon/paintbrush.svg" alt="paint" />
+          </figure>
+          <div class="card-content">
+            <h2 class="card-title">Flowers and Styling/Coordination</h2>
+            <p class="card-excerpt">
+              Cater to flower arrangements styling requirements for all
+              occasions.
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card triple-cards">
+        <a href="#/nav/quick">
+          <figure class="card-thumb">
+            <img src="assets/icon/idea.svg" alt="idea" />
+          </figure>
+          <div class="card-content">
+            <h2 class="card-title">
+              A perfect theme stage styling only for You
+            </h2>
+            <p class="card-excerpt">
+              Choose the best flowers and styling theme that will suit your
+              budget and needs.
+            </p>
+          </div>
+        </a>
+      </article>
+      <article class="card triple-cards">
+        <a href="#/nav/custom">
+          <figure class="card-thumb">
+            <img src="assets/icon/robot.svg" alt="robot" />
+          </figure>
+          <div class="card-content">
+            <h2 class="card-title">Exciting new features.</h2>
+            <p class="card-excerpt">
+              Discover bouquet arrangements never seen before with the help of
+              our Artificial Intelligence(AI).
+            </p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div id="container-banner">
+  <div class="box">
+    <div class="courses-container">
+      <div class="course">
+        <div class="course-preview">
+          <h6>We also Offer</h6>
+          <h2>Event Planning</h2>
+          <a href="https://www.facebook.com/Details-Blooms-498222660191339"
+            >View our Facebook page <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+        <div class="course-info">
+          <h6>Details & Blooms</h6>
+          <h2>
+            We provide assistance to event needs and cater to flower
+            arrangements and styling requirements for all occasions.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="card mx-auto" style="width: 75%; margin-top: 1%; background: none">
+  <div class="card-body">
+    <h1 class="card-title"><mat-icon>cancel</mat-icon> Cancelled Orders</h1>
+
+    <div *ngIf="!orders" style="text-align: center">
+      <h3>
+        <strong
+          >Don't fill this page with cancelled orders! Explore all kinds of
+          bouquets. </strong
+        ><br /><small>I beg of you</small>
+      </h3>
+      <br />
+      <div class="card" style="background: none" matRipple>
+        <div class="card-body" style="cursor: pointer">
+          <h4>
+            “Flowers dont worry about how theyre going to bloom. <br />They just
+            open up and turn toward the light and that makes them beautiful.”
+            <br />Jim Carrey
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <ul class="list-group">
+      <div class="row">
+        <div
+          style="min-width: 50%; max-width: 50%"
+          class="col"
+          *ngFor="let order of orders; index as i"
+        >
+          <li class="list-group-item" style="display: flex">
+            <div class="row">
+              <div class="col">
+                <div>
+                  <div style="display: flex">
+                    <div style="flex-basis: 15%">
+                      <img style="max-width: 100%" src="assets/icon/Logo.png" />
+                    </div>
+                    <h3 style="margin-left: 1%">{{ order.order_flower }}</h3>
+                  </div>
+                  <h3 id="details">
+                    <strong>₱ {{ order.order_totalprice }}</strong>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="col">
+                <mat-chip-list>
+                  Status:
+                  <mat-chip style="color: rgb(35, 32, 248)">{{
+                    order.order_status
+                  }}</mat-chip>
+                  <mat-chip
+                    align="end"
+                    style="cursor: pointer"
+                    title="Undo cancel"
+                    (click)="undo(i, order)"
+                    ><mat-icon>undo</mat-icon></mat-chip
+                  >
+                  Cancelled at:<mat-chip style="color: rgb(35, 32, 248)">{{
+                    order.last_updated_at
+                  }}</mat-chip>
+                </mat-chip-list>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

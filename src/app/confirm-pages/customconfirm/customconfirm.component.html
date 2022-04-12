@@ -1,0 +1,73 @@
+<button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+  </button>
+
+<div class="row">
+
+    <div class="col">
+        <div id="center container">
+            <div class="mx-auto" style="width: 100%;">
+                <div class="card-body" style="text-align: center;display: block;justify-content: center;">
+
+                    <mat-card style="width: 330px;">
+                        <mat-card-header>
+                            <div style="text-align:center;">
+                                <mat-card-title>Generated Bouquet</mat-card-title>
+                            </div>
+                        </mat-card-header>
+                            <mat-card-content>
+                                <div [innerHtml]="content"></div>
+                            </mat-card-content>
+
+                        <mat-card-actions>
+                            <h4>Confirm the flower bouquet</h4>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div id="separator">
+            <h2>Product Description</h2>
+            <div id="detail">
+                <h6>Primary:</h6><h4> ₱ {{ total_primary_price }} {{ primary.replace('_', ' ') | titlecase }}</h4>
+
+                <h6>Secondary:</h6><h4> ₱ {{ total_secondary_price }} {{ secondary.replace('_', ' ') | titlecase  }}</h4>
+                <!-- <small>Detail: {{secondary_details}}</small> -->
+
+                <h4 *ngIf="tertiary == null;else flowername">{{ total_tertiary_price }} {{ tertiary }}</h4>
+                <ng-template #flowername><h6>Tertiary:</h6><h4>₱ {{ total_tertiary_price }} {{ tertiary.replace('_', ' ') | titlecase }}</h4></ng-template>
+                <h6>Other Fee:</h6><h4> ₱{{ otherfee }}</h4>
+                <h6>Quantity:</h6><h4> {{ quantity }}</h4>
+                <h6>Total Price:</h6><h3> ₱ <b>{{ total }}</b></h3>
+            </div>
+        </div>
+
+        <mat-card-actions>
+            <button 
+                id="quick_btn"
+                mat-flat-button 
+                color="success" 
+                (click)="add_to_cart()" 
+                matTooltipPosition='above'
+                matTooltip="Add the product to your Cart">Cart <mat-icon>add_shopping_cart</mat-icon> 
+            </button>
+            
+            <button 
+                class="mt-5"
+                id="quick_buy"
+                mat-flat-button
+                (click)="mode()" 
+                color="success" 
+                matTooltip="Proceed to buy the product" 
+                matTooltipPosition='above'>Checkout
+            </button>
+        </mat-card-actions>
+    </div>
+    
+</div>
+
+
+

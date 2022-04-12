@@ -1,0 +1,333 @@
+// .btn-circle.btn-xl {
+//   width: 70px;
+//   height: 70px;
+//   padding: 10px 16px;
+//   border-radius: 35px;
+//   border: none;
+//   font-size: 12px;
+//   background: linear-gradient(to bottom right, #65d863, #248661, #4bece4);
+//   text-align: center;
+//   color: rgb(253, 253, 253);
+// }
+
+// .btn-circle#btnxl1:hover,
+// .btn-circle#btnxl2:hover,
+// .btn-circle#btnxl3:hover {
+//   background: linear-gradient(to bottom right, #4bece4, #248661, #65d863);
+// }
+
+// .list-group {
+//   max-height: 450px !important;
+//   margin-bottom: 10px !important;
+//   overflow-x: hidden !important;
+//   -webkit-overflow-scrolling: touch !important;
+// }
+
+// .list-group-item {
+//   // max-width: 90%;
+//   // margin-bottom: 5%;
+//   cursor: pointer;
+//   // border-radius: 20px;
+//   // min-height: 95%;
+//   // border-top: hidden;
+//   border-left: none;
+//   border-right: hidden;
+//   border-top: 1px solid rgb(198, 235, 206);
+//   border-bottom: none;
+//   background: none;
+// }
+
+// .text {
+//   // position: absolute;
+//   // width: 100%;
+//   // height: 100%;
+//   padding-left: 1%;
+// }
+
+// #main_card1 {
+//   width: 65%;
+//   margin-top: 1%;
+//   color: white;
+//   font-weight: 300;
+//   background: url("../../../assets/icon/header1.jpg") no-repeat center center
+//     fixed;
+//   background-size: cover;
+//   border-radius: 2.5rem;
+//   padding: 1rem 1rem;
+// }
+#main_card {
+  width: 60%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: none;
+}
+
+// .mat-expansion-panel {
+//   background: none;
+//   color: rgb(255, 255, 255);
+//   border: none;
+// }
+
+// #btn_txt {
+//   font-weight: 500;
+// }
+
+// #cart_main {
+//     width: 65%;
+//     // background: linear-gradient(180deg, #db8691 0%, #dfafb5 100%);
+//     background: linear-gradient(to bottom right,#65d863,#248661,#4bece4);
+//     margin-top: 1%;
+//     margin-bottom: 3%;
+// }
+
+// #card_info {
+//   font-weight: 500;
+//   color: rgb(0, 0, 0);
+//   background-color: rgba(255, 255, 255, 0.288);
+//   border-radius: 2.5rem;
+//   padding: 1rem 1rem;
+// }
+
+// #cart_card {
+//     background: none;
+//     color:rgb(255, 255, 255);
+//     border: none;
+//     min-width: 50%;
+//     max-width: 50%;
+//     min-height: 20% !important;
+//     max-height: 20% !important;
+// }s
+
+// .mat-tab-label {
+//   color: white;
+// }
+
+// #cart_card_body {
+//     background-image: url('../../../assets/flowers/sunflower.png');
+//     background-repeat: no-repeat center;
+//     background-size: 40% 50%;
+// }
+
+// #cart_li {
+//     display: flex;
+//     background: none;
+// }
+
+// #cart_li:hover {
+//   background: linear-gradient(to bottom right,#4bece4,#248661,#65d863);
+// }
+
+// ::-webkit-scrollbar {
+//   width: 5px;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: rgb(240, 245, 214);
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: rgb(243, 255, 214);
+// }
+
+// #details_area {
+//     margin-bottom: -1%;
+//     padding-left: 1%;
+//     width: 100%;
+// }
+
+// a {
+//   font-size: 80%;
+//   cursor: pointer;
+//   font-weight: 500;
+// }
+
+// .mat-list-item:hover {
+//   color: rgb(134, 172, 123);
+//   font-size: large;
+// }
+
+// .mat-list-item {
+//   // max-height: 25px;
+//   color: rgb(2, 34, 12);
+//   margin-bottom: -15px !important;
+// }
+
+// .list .mat-list-base .mat-list-item .mat-list-item-content {
+//   padding: 0 !important;
+// }
+
+// .mat-divider {
+//   border-top-color: rgb(255, 255, 255);
+// }
+
+// .col_title {
+//   font-weight: 500;
+//   color: rgb(2, 34, 12);
+//   margin-bottom: -1px !important;
+// }
+
+// .benef_logo {
+//   width: 30%;
+//   display: block;
+//   margin-top: 1%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   background-color: white;
+//   border-radius: 100%;
+// }
+
+// footer {
+//   bottom: 0;
+//   width: 100%;
+//   background: #e3f0ff;
+// }
+
+// .wrapper {
+//   min-height: 100%;
+// }
+
+// #info-label {
+//   color: rgb(2, 34, 12);
+// }
+
+// .table th,
+// .table td {
+//   padding: 0;
+//   vertical-align: middle;
+//   border: none;
+//   margin-bottom: 0;
+// }
+
+.showcase {
+  color: rgb(2, 34, 12);
+  background-color: none;
+  text-align: center;
+  padding: 20px 30px;
+  text-align: justify;
+}
+.explorer {
+  font-size: 5vw;
+  background-color: none;
+
+  text-transform: uppercase;
+  font-family: "bebas";
+}
+
+.completed {
+  .header-top {
+    font-family: "bebas";
+    font-size: 3vw;
+    padding: 1rem;
+  }
+
+  .list-group {
+    h3 {
+      font-family: "bebas";
+      font-size: 2vw;
+      padding: 1rem;
+    }
+    h5 {
+      font-family: "bebas";
+      font-size: 1vw;
+      padding: 1rem;
+    }
+    p {
+      font-family: "bebas";
+      font-size: 1vw;
+      padding: 1rem;
+    }
+  }
+}
+
+.cancelled {
+  .header-top {
+    font-family: "bebas";
+    font-size: 3vw;
+    padding: 1rem;
+  }
+
+  .list-group {
+    h3 {
+      font-family: "bebas";
+      font-size: 2vw;
+      padding: 1rem;
+    }
+    .status {
+      font-family: "bebas";
+      font-size: 1vw;
+      padding: 1rem;
+    }
+    p {
+      font-family: "bebas";
+      font-size: 1vw;
+      padding: 1rem;
+    }
+  }
+}
+
+//mobile browsing
+@media screen and (max-width: 600px) {
+  .explorer {
+    font-size: 10vw;
+    background-color: none;
+
+    text-transform: uppercase;
+    font-family: "bebas";
+  }
+  #main_card {
+    width: 90%;
+  }
+
+  .completed {
+    .header-top {
+      font-size: 5vh;
+    }
+
+    .list-group {
+      img {
+        width: 3rem;
+      }
+      h3 {
+        font-size: 3vh;
+      }
+      h5 {
+        font-size: 2vh;
+      }
+      p {
+        font-size: 2vh;
+      }
+    }
+  }
+
+  .cancelled {
+    .header-top {
+      font-size: 5vh;
+    }
+
+    .list-group {
+      img {
+        width: 3rem;
+      }
+      h3 {
+        font-size: 3vh;
+      }
+      h5 {
+        font-size: 2vh;
+      }
+      p {
+        font-size: 2vh;
+      }
+    }
+  }
+}
+
+//website
+@media screen and (min-width: 601px) {
+}

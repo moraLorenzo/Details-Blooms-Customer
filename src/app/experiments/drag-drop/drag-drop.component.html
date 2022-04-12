@@ -1,0 +1,170 @@
+<!-- <div class="container">
+    <div class="example-boundary">
+        <div id="list" class="example-box" cdkDrag="cdkDrag">
+          <img id="item" *ngIf="selected1 != null" width="300%" src="http://localhost/bloompod_api/flowers/{{selected1}}.png"/>
+        </div>
+        <img width="100%" src="../../../assets/base/bouquet-by-twelve.png">
+    </div>
+    <button mat-flat-button color="primary">Clone</button>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Select flower</mat-label>
+            <mat-select [(value)]="selected1" id="selectInput" (selectionChange)="flowerChange($event.value)">
+                <mat-option value="rose">Rose</mat-option>
+                <mat-option value="white_rose">White Rose</mat-option>
+                <mat-option value="pink_rose">Pink Rose</mat-option>
+                <mat-option value="orchid">Orchid</mat-option>
+                <mat-option value="pink_orchid">Pink Orchid</mat-option>
+                <mat-option value="sunflower">Sunflower</mat-option>
+            </mat-select>
+    </mat-form-field>
+</div> -->
+
+<!-- <hello name="{{ name }}"></hello> -->
+<!-- <div class="row">
+    <div class="col">
+    <h2>Origin</h2>
+
+    <div
+        cdkDropList
+        #originList="cdkDropList"
+        [cdkDropListData]="flowers"
+        [cdkDropListConnectedTo]="[destinationList]"
+        >
+        <div *ngFor="let flower of flowers" cdkDrag>
+        <img style="width: 10%;z-index: 1;" src="http://localhost/bloompod_api/flowers/{{flower.flower_name}}.png"/>
+        </div>
+    </div>
+    </div>
+
+    <div class="col">
+        <h2>Copy</h2>
+        <div >
+            <img  cdkDropList
+            #destinationList="cdkDropList"
+            [cdkDropListData]="destination"
+            class="field-list"
+            (cdkDropListDropped)="drop($event)" width="50%;z-index: 1;" src="../../../assets/base/bouquet-by-twelve.png">
+            <div style="display: inline-block;" class="field-box" *ngFor="let flower of destination" >
+                <img id="bouquet"cdkDrag style="width: 10%;z-index: 1;position: absolute;" src="http://localhost/bloompod_api/flowers/{{flower.flower_name}}.png"/>
+            </div>
+        </div>
+
+        <canvas id="myCanvas"></canvas>
+
+        <button (click)="finish()">Confirm</button>
+    </div>
+</div> -->
+
+<!-- <div [@slideInOut]>This element will slide up and down when the value of 'visible' changes from true to false and vice versa.</div>
+
+<button (click)="slide">Click</button> -->
+
+
+<!-- <div class="wrapper">
+    <button (click)="toggleShowDiv('divA')">TOGGLE DIV</button>
+    <div [@slideInOut]="animationState" style="height: 100px; background-color: red;">
+    THIS DIV IS ANIMATED</div>
+    <div class="content">THIS IS CONTENT DIV</div>
+  </div>
+
+<div>
+    
+    <div class="box" [class.opened]="show">
+        <button mat-raised-button color="accent" class="box-opener" (click)="show = !show">
+            Help <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis eleifend. Vivamus at augue eget arcu dictum. Dui sapien eget mi proin sed libero enim sed faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Varius sit amet mattis vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit. Convallis tellus id interdum velit laoreet id donec ultrices. Tempus urna et pharetra pharetra massa massa. Tempor commodo ullamcorper a lacus vestibulum sed arcu non odio. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Semper auctor neque vitae tempus quam pellentesque nec nam. Mauris nunc congue nisi vitae suscipit tellus mauris. Eget magna fermentum iaculis eu. Mi in nulla posuere sollicitudin. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Nam libero justo laoreet sit amet. Aliquam faucibus purus in massa. Velit ut tortor pretium viverra suspendisse potenti nullam ac.
+    </div>
+</div> -->
+
+<!-- <div class="dropdown">
+    <button class="dropbtn"><mat-icon>more</mat-icon></button>
+    <div class="dropdown-content">
+      <a >To Pay Page</a>
+      <a >Service Page</a>
+      <a >Completed Page</a>
+    </div>
+  </div> -->
+
+
+  
+<!-- <button mat-button-raised (click)="displayNotification()">Notification</button> -->
+<!-- <div style="display: block;">
+    <div class="sej-author">
+        <div class="sej-fasocial"><a class="sej-abimage green-bhover">
+                <div class="dark-image rimage"><img loading="lazy" width="80" height="80" src="../../../assets/icons/rosqueta1.jpg" alt="Emmanuel John Rosqueta"></div>
+            </a>
+            <div class="sej-fainfo"><a class="sej-faname">Emmanuel John Rosqueta </a>
+                <div class="sej-fastatus">Hipster</div>
+            </div>
+        </div>
+
+        <div class="sej-social-links">
+            <ul class="list-unstyled clearfix">
+                <li><a class="facebook-color" href="https://www.facebook.com/helloannabranding"> <mat-icon>facebook</mat-icon></a></li>
+                <li><a class="twitter-color" href="https://twitter.com/annaleacrowe"><mat-icon>email</mat-icon></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sej-author">
+        <div class="sej-fasocial"><a class="sej-abimage green-bhover">
+            <div class="dark-image rimage"><img loading="lazy" width="80" height="80" src="../../../assets/icons/rosqueta1.jpg" alt="Emmanuel John Rosqueta"></div>
+        </a>
+        <div class="sej-fainfo"><a class="sej-faname">Emmanuel John Rosqueta </a>
+            <div class="sej-fastatus">Hipster</div>
+        </div>
+        </div>
+        <div class="sej-social-links">
+        <ul class="list-unstyled clearfix">
+            <li><a class="facebook-color" href="https://www.facebook.com/helloannabranding"> <mat-icon>facebook</mat-icon></a></li>
+            <li><a class="twitter-color" href="https://twitter.com/annaleacrowe"><mat-icon>email</mat-icon></a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="sej-author">
+        <div class="sej-fasocial"><a class="sej-abimage green-bhover">
+            <div class="dark-image rimage"><img loading="lazy" width="80" height="80" src="../../../assets/icons/rosqueta1.jpg" alt="Emmanuel John Rosqueta"></div>
+        </a>
+        <div class="sej-fainfo"><a class="sej-faname">Emmanuel John Rosqueta </a>
+            <div class="sej-fastatus">Hipster</div>
+        </div>
+        </div>
+        <div class="sej-social-links">
+        <ul class="list-unstyled clearfix">
+            <li><a class="facebook-color" href="https://www.facebook.com/helloannabranding"> <mat-icon>facebook</mat-icon></a></li>
+            <li><a class="twitter-color" href="https://twitter.com/annaleacrowe"><mat-icon>email</mat-icon></a></li>
+        </ul>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div id="myCart" class="Cartoverlay">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <div class="Cartoverlay-content">
+        <a href="#">Florists Choice (Preferred)</a>
+        <a href="#">Customers Choice (Custom)</a>
+    </div>
+</div>
+  
+  <h2>Fullscreen Overlay Nav Example</h2>
+  <p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+  <p>In this example, the navigation menu will slide downwards from the top:</p>
+  <span style="font-size:30px;cursor:pointer" (click)="Cart()">&#9776; open</span> -->
+
+<button (click)="flower_loop()">Get</button>
+
+  <p>
+    Start editing to see some magic happen :)
+  </p>
+  <div style="width: 840px; height: 500px; text-align:center;margin:0; padding:0;">
+    <ng-image-slider #nav
+      [images]="orders"
+      [infinite]="false"
+      [autoSlide]="1"
+      [imageSize]="{width: '25%', height: 200}"
+      slideImage="1"></ng-image-slider>
+  </div>

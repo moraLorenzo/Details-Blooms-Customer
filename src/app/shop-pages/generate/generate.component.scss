@@ -1,0 +1,205 @@
+#main_card {
+  width: 65%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+}
+// #body_card {
+//     background-image: url('../../../assets/icon/benef_logo.png');
+//     background-repeat: no-repeat;
+//     background-size: 45% 120%;
+//     background-position: 130% 100%;
+// }
+
+#bouquet_card {
+  background: none;
+  width: 330px;
+  color: rgb(0, 0, 0);
+  // text-align: center;
+  // justify-content: center;
+}
+
+#bouquet_title {
+  color: rgb(0, 0, 0);
+}
+
+#lower_btn {
+  width: 100%;
+  // margin: 1%;
+}
+#quick_buy {
+  border-radius: 20px;
+  background: #00c4cc;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 150%;
+}
+
+// #details {
+//     width: 65%;
+//     margin-top: 1%;
+//     color: white;
+//     font-weight: 300;
+//     background: url("../../../assets/icon/header2.jpg") no-repeat center center;
+//     background-size: cover;
+//     border-radius: 2.5rem;
+//     padding: 1rem 1rem;
+// }
+
+#body_details {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.288);
+  border-radius: 2.5rem;
+  padding: 1rem 1rem;
+}
+
+// #side-btn {
+//   width: 100%;
+//   height: 100%;
+//   border: none;
+//   background: none;
+//   color: rgb(0, 0, 0);
+// }
+
+// #side-btn:hover {
+//   background: #e3f0ff;
+//   color: #00c4cc;
+// }
+
+// #side-btn:hover::after {
+//   content: "Previous";
+//   vertical-align: middle;
+// }
+
+#side-btnn {
+  //   width: 100%;
+  //   height: 100%;
+  //   border: none;
+  //   background: none;
+  //   color: rgb(0, 0, 0);
+  margin: auto;
+}
+
+// #side-btnn:hover {
+//     background: #e3f0ff;
+//     color: #00c4cc;
+// }
+
+// #side-btnn:hover::after {
+//     content: "Generate";
+//     vertical-align: middle;
+//     margin-left: 3%;
+// }
+
+// #addtocart {
+//   border-radius: 100%;
+//   background: none;
+//   // border-radius: 25px;
+//   // text-align: center;
+// }
+// #addtocart:hover {
+//   background: #c5e0ff;
+// }
+
+.about {
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+
+  .side-by-side {
+    display: flex;
+    justify-content: space-between;
+
+    sup {
+      font-size: 0.6rem;
+      margin-right: 2px;
+    }
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6e6e6e;
+  }
+}
+
+.showcase {
+  color: rgb(2, 34, 12);
+  background-color: none;
+  text-align: center;
+  padding: 20px 30px;
+  text-align: justify;
+}
+.explorer {
+  font-size: 5vw;
+  background-color: none;
+
+  text-transform: uppercase;
+  font-family: "bebas";
+}
+
+#side-btn-mob {
+  // display: none;
+  visibility: hidden;
+  border-radius: 100%;
+  background: none;
+}
+
+@media screen and (max-width: 850px) {
+  #side-btn,
+  #side-btnn {
+    // width: 10%;
+    // height: 10%;
+    display: none;
+    border: none;
+    background: none;
+    color: rgb(0, 0, 0);
+  }
+  #side-btn-mob {
+    visibility: visible;
+  }
+  #main_card {
+    width: 100%;
+  }
+  #col-hide {
+    display: none;
+  }
+  .col {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .col {
+    display: block;
+    margin-left: -25px;
+    // margin-right: auto;
+    // background-color: red;
+  }
+  #bouquet_card {
+    background: none;
+    width: 330px;
+    color: rgb(0, 0, 0);
+    // text-align: center;
+    // justify-content: center;
+  }
+}
+
+// @media screen and (max-width: 400px) {
+//     #bouquet_card {
+//         background: none;
+//         width: 330px;
+//         color: rgb(0, 0, 0);
+//         margin-left: -110px;
+//         // justify-content: center;
+//     }
+// }

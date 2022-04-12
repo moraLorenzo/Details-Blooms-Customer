@@ -1,0 +1,108 @@
+<div class="logout" id="logout" *ngIf="id_from == logout">
+  <h2 mat-dialog-title>Logout</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3>Do you want to logout?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="removefromcart" id="removefromcart" *ngIf="id_from == removefromcart">
+  <h2 mat-dialog-title>Cancel Product</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3>The product will be deleted. Are you sure?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="removefromtopay" id="removefromtopay" *ngIf="id_from == removefromtopay">
+  <h2 mat-dialog-title>Cancel Product</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3>The product will be deleted. Are you sure?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="confirmcart" id="confirmcart" *ngIf="id_from == confirmcart">
+  <h2 mat-dialog-title>Remove Product</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3>The product will be removed from the cart. Are you sure?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="addtocart" id="addtocart" *ngIf="id_from == addtocart">
+  <h2 mat-dialog-title>Add Product to cart</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3>The product will be added to the cart. Are you sure?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="checkout" id="checkout" *ngIf="id_from == checkout">
+  <h2 mat-dialog-title>Checkout the Product</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3>Proceed to buy the product. Are you sure?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="imageupload" id="imageupload" *ngIf="id_from == imageupload">
+  <h2 mat-dialog-title>Payment Image Upload</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3 style="text-align: center;">Submit the image to confirm the payment.<br> Are you sure?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="check_info" id="check_info" *ngIf="id_from == check_info">
+  <h2 mat-dialog-title>Purchase Complete</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3 style="text-align: center;">Thank you for purchasing.<br>Just wait for the confirmation of the store in the service page and you are good to go.</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Okay</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="fill_mode" id="fill_mode" *ngIf="id_from == fill_mode">
+  <h2 mat-dialog-title>Proceed to Payment</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3 style="text-align: center;">Do you confirm that before proceeding you have checked<br>all the information given with no typographical errors?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Back</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>
+
+<div class="undocancel" id="undocancel" *ngIf="id_from == undocancel">
+  <h2 mat-dialog-title>Undo Cancellation</h2>
+  <mat-dialog-content style="color: black;" class="mat-typography">
+    <h3 style="text-align: center;">Add the product again in the cart?</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>No</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </mat-dialog-actions>
+</div>

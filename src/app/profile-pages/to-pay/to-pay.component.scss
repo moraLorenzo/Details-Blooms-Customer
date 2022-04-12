@@ -1,0 +1,333 @@
+.table th,
+.table td {
+  padding: 0;
+  vertical-align: middle;
+  border: none;
+  margin-bottom: 0;
+}
+.list-group {
+  // height: 80%;
+  // min-height: 100% !important;
+  max-height: 100% !important;
+  margin-bottom: 1% !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-bottom: none;
+}
+
+.list-group-item {
+  cursor: pointer;
+
+  border-left: none;
+  border-right: hidden;
+  border-top: 1px solid rgb(192, 191, 191);
+  border-bottom: none;
+  background: none;
+}
+
+#quick_btn1 {
+  border-radius: 5px;
+  background-color: #e3f0ff;
+  margin: 1%;
+  border: none;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b4b4b4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(83, 83, 83);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+
+.text {
+  padding-left: 1%;
+  font-size: 100%;
+}
+.text1 {
+  margin-left: 35%;
+  font-size: 100%;
+}
+
+#details {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.text-details {
+  font-size: 100%;
+  line-height: 0.9;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 45%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text123 {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+#img-view {
+  max-width: 100%;
+  transition: 0.5s ease;
+}
+
+#details {
+  margin-bottom: 1%;
+}
+
+#main_card {
+  background: none;
+  width: 75%;
+  margin-top: 1%;
+  .card-body {
+    padding: 0;
+    padding-top: 1.5rem;
+    img {
+      margin: auto;
+      width: 15vw;
+      opacity: 50%;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+    strong {
+      font-family: "bebas";
+      font-size: 2rem;
+      opacity: 50%;
+    }
+    .list-group {
+      #title {
+        font-family: "bebas";
+      }
+      #Infos {
+        text-decoration: underline;
+      }
+      .row {
+        .col {
+          p {
+            font-size: 1vw;
+          }
+        }
+      }
+
+      form {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+#payment_dits {
+  color: black;
+}
+
+.header-top {
+  .showcase {
+    color: rgb(2, 34, 12);
+    background-color: none;
+    text-align: center;
+    padding: 20px 30px;
+    text-align: justify;
+  }
+}
+
+#card_info {
+  width: 75%;
+  margin-top: 1%;
+  color: rgb(0, 0, 0);
+  .content {
+    .row {
+      .col {
+        h2 {
+          font-size: 2rem;
+        }
+        h4 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+#detail {
+  font-family: "bebas";
+  font-size: 1.5rem;
+}
+
+#page-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1009;
+  background: rgba(255, 255, 255, 0.8);
+
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    .center-image {
+      #spinner {
+        height: 10rem;
+        top: 35%;
+        left: calc(55% - 10%);
+        z-index: 100;
+      }
+      .rotate {
+        animation: rotation 4s infinite linear;
+      }
+    }
+
+    #wait {
+      // position: fixed;
+      top: 56%;
+      // left: calc(57% - 10%);
+      text-align: center;
+      z-index: 100;
+      color: #08595e;
+      font-size: 3vw;
+    }
+  }
+}
+
+//website size
+@media screen and (min-width: 601px) {
+  .header-top {
+    .explorer {
+      font-size: 5vw;
+      background-color: none;
+
+      text-transform: uppercase;
+      font-family: "bebas";
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header-top {
+    .explorer {
+      font-size: 5vw;
+      background-color: none;
+
+      text-transform: uppercase;
+      font-family: "bebas";
+    }
+  }
+}
+#topay-form {
+  width: 75%;
+  margin-top: 1%;
+  background: none;
+}
+
+@media screen and (max-width: 1150px) {
+  #topay-form {
+    width: 100%;
+    margin-top: 1%;
+    background: none;
+  }
+}
+//mobile browsing
+@media screen and (max-width: 600px) {
+  #page-overlay {
+    .content {
+      .center-image {
+        #spinner {
+          height: 10rem;
+        }
+      }
+
+      #wait {
+        top: 56%;
+        text-align: center;
+        z-index: 100;
+        color: #08595e;
+        font-size: 2rem;
+      }
+    }
+  }
+  .header-top {
+    .explorer {
+      font-size: 10vw;
+      background-color: none;
+
+      text-transform: uppercase;
+      font-family: "bebas";
+    }
+  }
+
+  #card_info {
+    .content {
+      .row {
+        .col {
+          h2 {
+            margin-top: 20%;
+          }
+        }
+      }
+    }
+  }
+
+  #main_card {
+    .card-body {
+      img {
+        margin: auto;
+        width: 5rem;
+        opacity: 50%;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+      }
+      strong {
+        font-family: "bebas";
+        font-size: 2rem;
+        opacity: 50%;
+      }
+      .list-group {
+        #title {
+          font-family: "bebas";
+        }
+        #Infos {
+          text-decoration: underline;
+        }
+
+        .row {
+          .col {
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        form {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}

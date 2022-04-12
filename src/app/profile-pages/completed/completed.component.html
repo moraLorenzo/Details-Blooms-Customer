@@ -1,0 +1,86 @@
+<div class="card mx-auto" style="width: 75%; margin-top: 1%; background: none">
+  <div class="card-body">
+    <h1 class="card-title">
+      <mat-icon>assignment_turned_in</mat-icon> Completed Transactions
+    </h1>
+
+    <div *ngIf="!orders" style="text-align: center">
+      <h3>
+        <strong>There are currently no orders that have been completed.</strong>
+      </h3>
+      <br />
+      <div class="card" style="background: none" matRipple>
+        <div class="card-body" style="cursor: pointer">
+          <h4>
+            “Flowers don’t worry about how they’re going to bloom. <br />They
+            just open up and turn toward the light and that makes them
+            beautiful.” <br />Jim Carrey
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <ul class="list-group">
+      <div class="row">
+        <div
+          style="min-width: 50%; max-width: 50%"
+          class="col"
+          (click)="view(i, order)"
+          *ngFor="let order of orders; index as i"
+        >
+          <li class="list-group-item" style="display: flex" matRipple>
+            <div class="row">
+              <div class="col">
+                <div>
+                  <div style="display: flex">
+                    <div style="flex-basis: 30%">
+                      <img style="max-width: 100%" src="assets/icon/Logo.png" />
+                    </div>
+                    <h3 style="margin-left: 1%">{{ order.order_flower }}</h3>
+                  </div>
+                  <h3 id="details">
+                    <strong
+                      >₱ {{ order.order_totalprice | number: "1.2-2" }}</strong
+                    >
+                  </h3>
+                  <p id="details">For: {{ order.order_recipient }}</p>
+                  <p
+                    id="details"
+                    *ngIf="order.main_flower == null; else contain1"
+                  >
+                    Details:
+                  </p>
+                  <ng-template #contain1>
+                    <p id="details">
+                      Primary:
+                      {{ order.main_flower.replace("_", " ") | titlecase }}
+                    </p>
+                    <p id="details">
+                      Secondary:
+                      {{ order.secondary_flower.replace("_", " ") | titlecase }}
+                    </p>
+                    <p id="details" *ngIf="order.tertiary_flower != null">
+                      Tertiary:
+                      {{ order.tertiary_flower.replace("_", " ") | titlecase }}
+                    </p>
+                  </ng-template>
+                </div>
+              </div>
+
+              <div class="col">
+                <p>
+                  Status:
+                  <mat-chip-list>
+                    <mat-chip style="color: rgb(35, 32, 248)">{{
+                      order.order_status
+                    }}</mat-chip>
+                  </mat-chip-list>
+                </p>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

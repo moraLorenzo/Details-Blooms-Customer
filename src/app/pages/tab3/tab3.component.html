@@ -1,0 +1,327 @@
+<div
+  id="center container"
+  class="wrapper mb-5"
+  style="margin-top: 1%; background: none"
+>
+  <div class="card-body">
+    <div class="card-title text-center header-top">
+      <div class="showcase">
+        <h3 class="mt-1" id="line-style" style="text-align: center">
+          <span class="explorer">ACCOUNT INFORMATION</span>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mx-auto" id="main_card">
+    <div class="card-body" id="card_info">
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Profile">
+          <div class="mt-4">
+            <label class="form-label" id="info-label" style="font-size: large"
+              >Name</label
+            >
+            <div class="input-group">
+              <input
+                disabled
+                type="text"
+                class="form-control text-center"
+                id="fname"
+                value="{{ fname }}"
+                aria-label="First Name"
+              />
+              <input
+                disabled
+                type="text"
+                class="form-control text-center ml-1"
+                id="lname"
+                value="{{ lname }}"
+                aria-label="Last Name"
+              />
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label
+              for="email"
+              class="form-label"
+              id="info-label"
+              style="font-size: large"
+              >Email</label
+            >
+            <div class="input-group">
+              <input
+                disabled
+                type="text"
+                class="form-control text-center"
+                id="email"
+                value="{{ email }}"
+                aria-label="Email"
+              />
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label
+              for="address"
+              class="form-label"
+              id="info-label"
+              style="font-size: large"
+              >Address</label
+            >
+            <div class="input-group">
+              <input
+                disabled
+                type="text"
+                class="form-control text-center"
+                id="address"
+                value="{{ address }}"
+                aria-label="Address"
+              />
+            </div>
+          </div>
+          <div class="mt-4 justify-content-center mx-auto" style="width: 50%">
+            <button
+              type="button"
+              class="btn btn-secondary btn-block"
+              (click)="change_password()"
+            >
+              Change Password
+            </button>
+          </div>
+          <div class="mt-4 justify-content-center mx-auto" style="width: 50%">
+            <button
+              type="button"
+              class="btn btn-secondary btn-block"
+              (click)="logout()"
+            >
+              Logout
+            </button>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Completed">
+          <div class="completed">
+            <h1 class="card-title mt-2 header-top">
+              <mat-icon>assignment_turned_in</mat-icon> Completed Transactions
+            </h1>
+
+            <div *ngIf="!orders" style="text-align: center">
+              <h3>
+                <strong
+                  >There are currently no orders that have been
+                  completed.</strong
+                >
+              </h3>
+              <br />
+              <div class="card" style="background: none" matRipple>
+                <div class="card-body" style="cursor: pointer">
+                  <h4>
+                    “Flowers don’t worry about how they’re going to bloom.
+                    <br />They just open up and turn toward the light and that
+                    makes them beautiful.” <br />Jim Carrey
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <ul class="list-group">
+              <div class="col" *ngFor="let order of orders; index as i">
+                <li class="list-group-item" style="display: flex" matRipple>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <ng-container
+                            class="mb-0"
+                            *ngIf="
+                              order.order_flower == 'Generated Flower Bouquet';
+                              else quick_img
+                            "
+                          >
+                            <div style="display: flex">
+                              <div style="flex-basis: 20%">
+                                <img
+                                  style="max-width: 100%"
+                                  class="rounded float-left"
+                                  src="assets/icon/benef_log.jpg"
+                                />
+                              </div>
+                              <div class="text d-block">
+                                <h3 class="mb-0">{{ order.order_flower }}</h3>
+                                <p
+                                  class="mb-0 mt-0"
+                                  *ngIf="order.order_recipient"
+                                  id="details"
+                                >
+                                  For: {{ order.order_recipient }}
+                                </p>
+                                <h5
+                                  id="details"
+                                  class="justify-content-end mt-0"
+                                >
+                                  {{ order.order_date | date }}
+                                </h5>
+                              </div>
+                            </div>
+                          </ng-container>
+                          <ng-template class="mb-0" #quick_img>
+                            <div style="display: flex">
+                              <div style="flex-basis: 19%">
+                                <img
+                                  style="max-width: 100%"
+                                  class="rounded float-left"
+                                  src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+                                    order.order_flower
+                                  }}.jpg"
+                                />
+                              </div>
+                              <div class="text text d-block">
+                                <h3 class="mb-0">{{ order.order_flower }}</h3>
+                                <p
+                                  class="mb-0 mt-0"
+                                  *ngIf="order.order_recipient"
+                                  id="details"
+                                >
+                                  For: {{ order.order_recipient }}
+                                </p>
+                                <h5
+                                  id="details"
+                                  class="justify-content-end mt-0"
+                                >
+                                  {{ order.order_date | date }}
+                                </h5>
+                              </div>
+                            </div>
+                          </ng-template>
+                        </td>
+                        <td>
+                          <div class="d-block">
+                            <h1
+                              id="details"
+                              class="justify-content-end mb-0 mt-0"
+                            >
+                              ₱{{ order.order_totalprice | number: "1.2-2" }}
+                            </h1>
+                            <mat-chip-list class="mt-0" style="float: right">
+                              <mat-chip style="color: rgb(1, 78, 5)">{{
+                                order.order_status
+                              }}</mat-chip>
+                            </mat-chip-list>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Cancelled">
+          <div class="cancelled">
+            <h1 class="card-title mt-2 header-top">
+              <mat-icon>cancel</mat-icon> Cancelled Items
+            </h1>
+
+            <div *ngIf="!orders" style="text-align: center">
+              <h3>
+                <strong
+                  >No Cancelled items and dont even think about it.</strong
+                >
+              </h3>
+              <br />
+              <div class="card" style="background: none" matRipple>
+                <div class="card-body" style="cursor: pointer">
+                  <h4>
+                    “Flowers don’t worry about how they’re going to bloom.
+                    <br />They just open up and turn toward the light and that
+                    makes them beautiful.” <br />Jim Carrey
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <ul class="list-group">
+              <div
+                class="col"
+                *ngFor="let order of cancelled_items; index as i"
+              >
+                <li class="list-group-item" style="display: flex" matRipple>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <ng-container
+                            class="mb-0"
+                            *ngIf="
+                              order.order_flower == 'Generated Flower Bouquet';
+                              else quick_img
+                            "
+                          >
+                            <div style="display: flex">
+                              <div style="flex-basis: 17%">
+                                <img
+                                  style="max-width: 100%"
+                                  class="rounded float-left"
+                                  src="assets/icon/benef_log.jpg"
+                                />
+                              </div>
+                              <div class="text d-block">
+                                <h3 class="mb-0">{{ order.order_flower }}</h3>
+                                <mat-chip-list class="mt-0">
+                                  <mat-chip
+                                    style="
+                                      color: rgb(35, 32, 248);
+                                      margin-left: 1rem;
+                                    "
+                                    >{{ order.order_status }}</mat-chip
+                                  >
+                                </mat-chip-list>
+                              </div>
+                            </div>
+                          </ng-container>
+                          <ng-template class="mb-0" #quick_img>
+                            <div style="display: flex">
+                              <div style="flex-basis: 17%">
+                                <img
+                                  style="max-width: 100%"
+                                  class="rounded float-left"
+                                  src="https://detailsblooms.gc-ecommerceapp.com/api/bloompod_api/quick/{{
+                                    order.order_flower
+                                  }}.jpg"
+                                />
+                              </div>
+                              <div class="text text d-block">
+                                <h3 class="mb-0">{{ order.order_flower }}</h3>
+                                <mat-chip-list class="mt-0">
+                                  <mat-chip
+                                    style="
+                                      color: rgb(35, 32, 248);
+                                      margin-left: 1rem;
+                                    "
+                                    >{{ order.order_status }}</mat-chip
+                                  >
+                                </mat-chip-list>
+                              </div>
+                            </div>
+                          </ng-template>
+                        </td>
+                        <td>
+                          <h1 id="details" class="justify-content-end">
+                            ₱{{ order.order_totalprice | number: "1.2-2" }}
+                          </h1>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

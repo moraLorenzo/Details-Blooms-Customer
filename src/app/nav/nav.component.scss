@@ -1,0 +1,404 @@
+a {
+  // text-transform: uppercase;
+}
+#nav_logo {
+  border-radius: 100%;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.nav-link {
+  color: rgb(2, 34, 12);
+}
+
+.tb-hold {
+  display: flex;
+  vertical-align: middle;
+}
+
+#tb-title {
+  color: rgb(2, 34, 12);
+  font-family: Liberal;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 100%;
+}
+
+#nav-items {
+  font-size: medium;
+}
+
+a {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#cart_btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.flexExpand {
+  flex: 1 1 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.icon {
+  cursor: pointer;
+  margin-right: 1%;
+}
+
+.icons {
+  cursor: pointer;
+  margin-right: 2%;
+}
+
+.greeting {
+  font-size: 70%;
+  display: block;
+  color: #ffffff;
+}
+
+.holder {
+  margin-bottom: -1%;
+  display: block;
+  margin: 1%;
+}
+
+.dropdown:hover + .overlay {
+  display: block;
+  height: 23rem;
+  color: rgb(2, 34, 12);
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+  top: 63px;
+  left: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), #e3f0ff), white;
+  overflow-y: hidden;
+  transition: 0.5s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.overlay:hover {
+  display: block;
+  height: 23rem;
+  top: 0;
+}
+
+#floristChoice {
+  padding-top: 15px;
+  display: table;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.09px white;
+  transition: all ease 1.5s;
+}
+
+#customerChoice {
+  padding-top: 15px;
+  display: table;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.09px white;
+  transition: all ease 1.5s;
+}
+
+#floristChoice:hover {
+  background-color: white;
+  box-shadow: inset 100vw 0 0 0 #08595e;
+  color: white;
+}
+#customerChoice:hover {
+  background-color: white;
+  box-shadow: inset 100vw 0 0 0 #08595e;
+  color: white;
+}
+
+.overlay-content {
+  position: relative;
+  top: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #383838;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay-content a:hover {
+  color: white;
+}
+
+.option-bouquets {
+  h1 {
+    font-size: 3rem;
+    font-family: "bebas" !important;
+    margin-bottom: 2vh;
+  }
+  h3 {
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .overlay {
+    overflow-y: auto;
+  }
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    right: 35px;
+  }
+}
+
+#card {
+  background: none;
+  cursor: pointer;
+  width: 30rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+
+#card:hover {
+  font-weight: 500;
+  background: rgb(255, 255, 255);
+  color: rgb(2, 34, 12);
+}
+
+.card-text {
+  font-size: 13px;
+  display: block;
+  line-height: 1;
+}
+
+.card-title {
+  font-size: 200%;
+  display: block;
+  line-height: 1;
+}
+
+#card2 {
+  background: none;
+  cursor: pointer;
+  width: 30rem;
+  // height: 100%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+
+#card2:hover {
+  font-weight: 500;
+  background: rgb(255, 255, 255);
+  color: rgb(2, 34, 12);
+}
+
+.card-title1 {
+  font-size: 90%;
+  display: block;
+  line-height: 1.1428571435;
+}
+
+.Cartoverlay {
+  height: 100vh;
+  width: 0%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow-y: hidden;
+  transition: 0.5s;
+  border-left: 1px solid grey;
+}
+
+.Cartoverlay-content {
+  position: relative;
+  top: 3%;
+  // background-color: white;
+  // width: 100%;
+  // text-align: center;
+  // margin-top: 30px;
+}
+
+.Cartoverlay a {
+  // padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.Cartoverlay a:hover,
+.Cartoverlay a:focus {
+  color: #000000;
+}
+
+.Cartoverlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 30px;
+}
+
+@media screen and (max-height: 450px) {
+  .Cartoverlay1 {
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-y: hidden;
+    transition: 0.5s;
+    border-left: 1px solid grey;
+  }
+
+  .Cartoverlay-content {
+    position: relative;
+    top: 3%;
+  }
+
+  .Cartoverlay a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .Cartoverlay a:hover,
+  .Cartoverlay a:focus {
+    color: #000000;
+  }
+
+  .Cartoverlay .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 30px;
+  }
+}
+
+.table th,
+.table td {
+  padding: 0;
+  vertical-align: middle;
+  border: none;
+  margin-bottom: 0;
+}
+.list-group {
+  max-height: 90vh !important;
+  margin-bottom: 1% !important;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-bottom: none;
+}
+
+.list-group-item {
+  cursor: pointer;
+
+  border-left: none;
+  border-right: hidden;
+  border-top: 1px solid rgb(192, 191, 191);
+  border-bottom: none;
+  background: none;
+}
+
+.list-group-item:hover {
+  background-color: #e3f0ff;
+}
+
+.text {
+  padding-left: 1%;
+  font-size: 1.2rem;
+  color: #08595e;
+}
+
+.text-details {
+  padding-left: 1%;
+  font-size: 0.8rem;
+  line-height: 0.5;
+  font-family: "bebas";
+}
+#details {
+  color: #08595e;
+  font-family: "bebas";
+  font-size: 1.5rem;
+}
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 45%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#preview:hover #img-view {
+  opacity: 0.5;
+  -ms-transform: scale(1.4); /* IE 9 */
+  -webkit-transform: scale(1.4); /* Safari 3-8 */
+  transform: scale(1.4);
+}
+
+#preview:hover .middle {
+  opacity: 1;
+}
+
+.list-group-item:hover #preview {
+  background-color: #e3f0ff;
+}
+
+.text123 {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+#img-view {
+  max-width: 100%;
+  transition: 0.5s ease;
+}
+
+#checknow {
+  font-size: 0%;
+}
+
+footer {
+  margin-top: 30vh;
+}
+
+.showcase {
+  color: rgb(2, 34, 12);
+  background-color: none;
+  text-align: center;
+
+  text-align: justify;
+}
+.explorer {
+  font-size: 2.5vw;
+  background-color: none;
+
+  text-transform: uppercase;
+  font-family: "bebas";
+}

@@ -1,0 +1,36 @@
+<div style="margin-top: 20px;margin-left: 20px;">
+    <h4 >To determine your flower arrangement</h4>
+    <h1>Please choose an option below</h1>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div (click)="quick()" matRipple class="card" id="card">
+                <div class="card-body" id="card_body1">
+                    <mat-icon>flash_on</mat-icon>
+                    <h1 class="card-title">Florists Choice<br><small>(Preferred)</small></h1>
+                    <p class="card-text">Keep close to Nature's heart... and break clear away, once in
+                        awhile, and climb a mountain or spend a week in the woods. Wash
+                        your spirit clean.</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col">
+            <div (click)="custom()" matRipple class="card" id="card">
+                <div class="card-body" id="card_body2">
+                    <mat-icon>brush</mat-icon>
+                    <h1 class="card-title">Customers Choice<br><small>(Custom)</small></h1>
+                    
+                        <p class="card-text">Using the <b>Branching Factor</b> methodology , the system could generate possible floral
+                            combinations based on user-defined preferences.</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
